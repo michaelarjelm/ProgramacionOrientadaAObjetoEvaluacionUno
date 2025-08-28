@@ -1,7 +1,7 @@
 from Ejercicio1.libro import Libro
 from Ejercicio1.biblioteca import Biblioteca
-# from Ejercicio2.alumno import
-# from Ejercicio2.curso import
+from Ejercicio2.alumno import Alumno
+from Ejercicio2.curso import Curso
 # from Ejercicio3.item import
 # from Ejercicio3.pedido import
 # from Ejercicio4.sensor import
@@ -42,6 +42,20 @@ bibliobus.devolucion(libro1, 2)
 bibliobus.listar_libros()
 
 # ==== Ejercicio 2: Desarrollo
+
+alumno1 = Alumno("Alondra Gonzalez")
+alumno2 = Alumno("Rovin Gatica")
+alumno3 = Alumno("Diego Foster")
+
+curso = Curso("Ilustracion")
+
+curso.inscribir_alumno(alumno1)
+curso.inscribir_alumno(alumno2)
+
+curso.listar_alumnos()
+
+curso.remover_alumno(alumno3)
+curso.remover_alumno(alumno1)
 
 # ==== Ejercicio 3: Desarrollo
 
