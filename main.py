@@ -4,7 +4,7 @@ from Ejercicio2.alumno import Alumno
 from Ejercicio2.curso import Curso
 from Ejercicio3.item import Item
 from Ejercicio3.pedido import Pedido
-# from Ejercicio4.sensor import
+from Ejercicio4.sensor import Sensor
 # from Ejercicio5.catalogo import
 # from Ejercicio5.pelicula import
 # from Ejercicio6.auth import
@@ -72,6 +72,17 @@ pedido1.agregar_item(item3)
 pedido1.calcular_total()
 
 # ==== Ejercicio 4: Desarrollo
+
+km_hora = Sensor("km/h")
+
+km_hora.agregar_valor(56)
+km_hora.agregar_valor(30)
+km_hora.agregar_valor(89)
+km_hora.agregar_valor(12)
+
+print(km_hora.minimo())
+print(km_hora.maximo())
+print(km_hora.promedio())
 
 # ==== Ejercicio 5: Desarrollo
 
