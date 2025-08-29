@@ -2,8 +2,8 @@ from Ejercicio1.libro import Libro
 from Ejercicio1.biblioteca import Biblioteca
 from Ejercicio2.alumno import Alumno
 from Ejercicio2.curso import Curso
-# from Ejercicio3.item import
-# from Ejercicio3.pedido import
+from Ejercicio3.item import Item
+from Ejercicio3.pedido import Pedido
 # from Ejercicio4.sensor import
 # from Ejercicio5.catalogo import
 # from Ejercicio5.pelicula import
@@ -58,6 +58,18 @@ curso.remover_alumno(alumno3)
 curso.remover_alumno(alumno1)
 
 # ==== Ejercicio 3: Desarrollo
+
+item1 = Item("lapiz", 1200, 6)
+item2 = Item("libreta", 4600, 8)
+item3 = Item("pila AA", 800, 4)
+
+pedido1 = Pedido()
+
+pedido1.agregar_item(item1)
+pedido1.agregar_item(item2)
+pedido1.agregar_item(item3)
+
+pedido1.calcular_total()
 
 # ==== Ejercicio 4: Desarrollo
 
