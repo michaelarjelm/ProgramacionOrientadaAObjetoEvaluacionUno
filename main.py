@@ -1,13 +1,13 @@
 from ejercicio1.libro import Libro, Biblioteca
 
 biblio = Biblioteca()
-libro1 = Libro("1984", "George Orwell", 3)
-libro2 = Libro("El Principito", "Antoine de Saint-Exupéry", 2)
+libro1 = Libro(" Un secreto en mi colegio ", " Angelica Dossetti ", 4)
+libro2 = Libro(" No toques a mi madre ", " Herve Mestron ", 3)
 
 biblio.agregar(libro1)
 biblio.agregar(libro2)
 
-biblio.prestar("1984")
-biblio.devolver("El Principito")
+biblio.prestar("Un secreto en mi Colegio")
+biblio.devolver("No toques a mi Madre ")
 
 biblio.listar()
