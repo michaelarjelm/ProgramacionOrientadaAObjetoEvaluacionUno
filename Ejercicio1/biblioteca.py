@@ -37,6 +37,6 @@ class Biblioteca:
         if not self.libros:
             print("-- La biblioteca está vacía --")
         else:
-            print("\n=== Biblioteca ===\n")
+            print("\n--- Biblioteca ---\n")
             for libro in self.libros:
                 print(libro)

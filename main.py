@@ -26,7 +26,7 @@ from Ejercicio5.pelicula import Pelicula
 # from Ejercicio14.examen import
 # from Ejercicio14.pregunta import
 
-# ==== Ejercicio 1: Desarrollo
+print("\n\t==== Ejercicio 1: Desarrollo ====")
 
 libro1 = Libro("Nubes de talco", "Amanda Baeza", 5)
 libro2 = Libro("Peklo", "Sukinapan", 7)
@@ -41,7 +41,7 @@ bibliobus.prestamo(libro1, 3)
 bibliobus.devolucion(libro1, 2)
 bibliobus.listar_libros()
 
-# ==== Ejercicio 2: Desarrollo
+print("\n\t==== Ejercicio 2: Desarrollo ====")
 
 alumno1 = Alumno("Alondra Gonzalez")
 alumno2 = Alumno("Rovin Gatica")
@@ -57,7 +57,7 @@ curso.listar_alumnos()
 curso.remover_alumno(alumno3)
 curso.remover_alumno(alumno1)
 
-# ==== Ejercicio 3: Desarrollo
+print("\n\t==== Ejercicio 3: Desarrollo ====")
 
 item1 = Item("lapiz", 1200, 6)
 item2 = Item("libreta", 4600, 8)
@@ -71,7 +71,7 @@ pedido1.agregar_item(item3)
 
 pedido1.calcular_total()
 
-# ==== Ejercicio 4: Desarrollo
+print("\n\t==== Ejercicio 4: Desarrollo ====")
 
 km_hora = Sensor("km/h")
 
@@ -84,7 +84,7 @@ print(km_hora.minimo())
 print(km_hora.maximo())
 print(km_hora.promedio())
 
-# ==== Ejercicio 5: Desarrollo
+print("\n\t==== Ejercicio 5: Desarrollo ====")
 
 peli1 = Pelicula("Akira", "ciencia ficcion", 1988)
 peli2 = Pelicula("Robot carnival", "ciencia ficcion", 1987)
@@ -102,20 +102,20 @@ animacion.filtrar_por_genero("ciencia ficcion")
 animacion.buscar_por_titulo("Atlantis")
 animacion.listar_peliculas()
 
-# ==== Ejercicio 6: Desarrollo
+# print("\n\t==== Ejercicio 6: Desarrollo ====")
 
-# ==== Ejercicio 7: Desarrollo
+# print("\n\t==== Ejercicio 7: Desarrollo ====")
 
-# ==== Ejercicio 8: Desarrollo
+# print("\n\t==== Ejercicio 8: Desarrollo ====")
 
-# ==== Ejercicio 9: Desarrollo
+# print("\n\t==== Ejercicio 9: Desarrollo ====")
 
-# ==== Ejercicio 10: Desarrollo
+# print("\n\t==== Ejercicio 10: Desarrollo ====")
 
-# ==== Ejercicio 11: Desarrollo
+# print("\n\t==== Ejercicio 11: Desarrollo ====")
 
-# ==== Ejercicio 12: Desarrollo
+# print("\n\t==== Ejercicio 12: Desarrollo ====")
 
-# ==== Ejercicio 13: Desarrollo
+# print("\n\t==== Ejercicio 13: Desarrollo ====")
 
-# ==== Ejercicio 14: Desarrollo
+# print("\n\t==== Ejercicio 14: Desarrollo ====")

@@ -10,7 +10,7 @@ class Pedido:
         if self.items:
             total = 0
             
-            print(f"\n=== Detalle del pedido ===")
+            print(f"\n--- Detalle del pedido ---")
             for item in self.items:
                 total += item.subtotal()
                 print(f"* {item.nombre} ${item.precio} x {item.cantidad}")
