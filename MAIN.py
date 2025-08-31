@@ -50,10 +50,21 @@ Curso1.listar()
 #----------------------------------------------------------------------------------------------#
 #EJERCICIO 3 : PEDIDO E ITEM
 
-from Ejercicio_3.Clases.PedidoItem import Item
+from Ejercicio_3.Clases.PedidoItem import Item, Pedido
 
 Item1 = Item("Gloss", 2000, 20)
 Item2 = Item("Sombra de ojos", 10000, 10)
 Item3 = Item("Máscar de pestañas", 5000, 15)
 
-Item1.subtotal()
+pedidobase = Pedido()
+
+costoTotal = Item1.subtotal()
+print (f"El subtotal de {Item1.nombre} es: ${costoTotal}")
+
+pedidobase.agregar(Item1)
+pedidobase.agregar(Item3)
+
+print (f"El valor total de tu pedido es de: ${pedidobase.total()}")
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 4 : PEDIDO E ITEM

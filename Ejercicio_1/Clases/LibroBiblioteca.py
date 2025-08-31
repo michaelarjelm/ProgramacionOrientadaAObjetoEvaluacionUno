@@ -16,19 +16,19 @@ class Biblioteca:
 
     def agregar(self, libro):
         self.listado.append(libro)
-        print (f"Haz agregado: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
+        print (f"Has agregado: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
 
     def prestar (self, libro):
         if libro.cantidad_copias >0:
             libro.cantidad_copias -=1
-            print (f"Haz prestado: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
+            print (f"Has prestado: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
         else:
             print (f"No hay copias disponibles de: '{libro.titulo}' de {libro.autor}, en tu Biblioteca.")
 
     def devolver (self, libro):
         if libro.cantidad_copias < libro.copias_disponibles:
             libro.cantidad_copias +=1
-            print (f"Haz devuelto: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
+            print (f"Has devuelto: '{libro.titulo}' de {libro.autor}, a tu Biblioteca. Tienes {libro.cantidad_copias} copias disponibles.")
         else:
             print (f"No puedes devolver este libro, ya que tienes todas las copias disponibles.")
     

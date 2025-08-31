@@ -10,11 +10,11 @@ class Curso:
     
     def inscribir(self, alumno: Alumno):
         self.lista_alumnos.append(alumno)
-        print (f"Haz inscrito a: {alumno.nombre}, en el curso de {self.nombre_curso}.")
+        print (f"Has inscrito a: {alumno.nombre}, en el curso de {self.nombre_curso}.")
 
     def remover(self, alumno: Alumno):
         self.lista_alumnos.remove(alumno)
-        print (f"Haz removido a: {alumno.nombre}, en el curso de {self.nombre_curso}.")
+        print (f"Has removido a: {alumno.nombre}, en el curso de {self.nombre_curso}.")
 
     def listar (self):
         print(f"Listado de Alumnos de {self.nombre_curso}:")
