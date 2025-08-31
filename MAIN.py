@@ -80,3 +80,20 @@ nombreSensor.registrar(-3)
 nombreSensor.promedio()
 nombreSensor.maximo()
 nombreSensor.minimo()
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 5 : PELICULA Y CATALOGO
+
+from Ejercicio_5.Clases.PeliculaCatalogo import Pelicula, Catalogo
+
+mainCatalogo = Catalogo ()
+
+pelicula1 = Pelicula("El Rey León", "Animación", 1994)
+pelicula2 = Pelicula("La Sirenita", "Animación", 1989)
+pelicula3 = Pelicula("Mulán", "Animación", 1998)
+
+mainCatalogo.agregar(pelicula1)
+mainCatalogo.agregar(pelicula2)
+mainCatalogo.agregar(pelicula3)
+
+mainCatalogo.filtrar(pelicula1)
