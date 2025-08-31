@@ -7,7 +7,7 @@ class Libro:
             self.titulo = titulo
             self.autor = autor
             self.copias = copias
-
+            
 
 
 # #def menu_biblioteca(biblioteca):
