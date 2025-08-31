@@ -5,8 +5,8 @@ from Ejercicio2.curso import Curso
 from Ejercicio3.item import Item
 from Ejercicio3.pedido import Pedido
 from Ejercicio4.sensor import Sensor
-# from Ejercicio5.catalogo import
-# from Ejercicio5.pelicula import
+from Ejercicio5.catalogo import Catalogo
+from Ejercicio5.pelicula import Pelicula
 # from Ejercicio6.auth import
 # from Ejercicio6.usuario import
 # from Ejercicio7.agenda import
@@ -85,6 +85,22 @@ print(km_hora.maximo())
 print(km_hora.promedio())
 
 # ==== Ejercicio 5: Desarrollo
+
+peli1 = Pelicula("Akira", "ciencia ficcion", 1988)
+peli2 = Pelicula("Robot carnival", "ciencia ficcion", 1987)
+peli3 = Pelicula("Atlantis", "aventura", 2001)
+peli4 = Pelicula("Perfect blue", "misterio", 1997)
+
+animacion = Catalogo()
+
+animacion.agregar_pelicula(peli1)
+animacion.agregar_pelicula(peli2)
+animacion.agregar_pelicula(peli3)
+animacion.agregar_pelicula(peli4)
+
+animacion.filtrar_por_genero("ciencia ficcion")
+animacion.buscar_por_titulo("Atlantis")
+animacion.listar_peliculas()
 
 # ==== Ejercicio 6: Desarrollo
 
