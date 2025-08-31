@@ -67,4 +67,16 @@ pedidobase.agregar(Item3)
 print (f"El valor total de tu pedido es de: ${pedidobase.total()}")
 
 #----------------------------------------------------------------------------------------------#
-#EJERCICIO 4 : PEDIDO E ITEM
+#EJERCICIO 4 : SENSOR Y MEDICIONES
+
+from Ejercicio_4.Clases.SensorMediciones import Sensor
+
+nombreSensor = Sensor("Temperatura")
+
+nombreSensor.registrar(10)
+nombreSensor.registrar(25)
+nombreSensor.registrar(-3)
+
+nombreSensor.promedio()
+nombreSensor.maximo()
+nombreSensor.minimo()
