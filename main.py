@@ -1,13 +1,40 @@
-from ejercicio1.libro import Libro, Biblioteca
 
-biblio = Biblioteca()
-libro1 = Libro(" Un secreto en mi colegio ", " Angelica Dossetti ", 4)
-libro2 = Libro(" No toques a mi madre ", " Herve Mestron ", 3)
 
-biblio.agregar(libro1)
-biblio.agregar(libro2)
+# # ejercicio uno libro y blibliioteca 
 
-biblio.prestar("Un secreto en mi Colegio")
-biblio.devolver("No toques a mi Madre ")
+# from ejercicio1.clases.libro import Libro
+# from ejercicio1.clases.biblioteca import Biblioteca
+# # esta es lka lista de libros 
+# biblio = Biblioteca()
+# libro1 = Libro(" Un secreto en mi colegio ", " Angelica Dossetti ", 4)
+# libro2 = Libro(" No toques a mi madre ", " Herve Mestron ", 3)
 
-biblio.listar()
+# # Aqui se agregan los libros 
+
+# biblio.agregar(libro1)
+# biblio.agregar(libro2)
+
+# # accion de prestar o devolver 
+
+# biblio.prestar("Un secreto en mi Colegio")
+# biblio.devolver("No toques a mi Madre ")
+
+# biblio.listar()
+
+
+
+#ejercicio dos Alumno y Clase 
+
+# from para llamar a las clases 
+from ejercicio2.clases.Alumno import Alumno
+from ejercicio2.clases.Curso import Curso
+# nombre curso y nombre alumnos 
+curso = Curso("analistas,programadores Inacap")
+alumno1 = Alumno("Carlos blanco")
+alumno2 = Alumno("Edgar ojeda")
+
+curso.inscribir(alumno1)
+curso.inscribir(alumno2)
+curso.remover("Carlos")  
+
+print("Alumnos inscritos:", curso.listar())

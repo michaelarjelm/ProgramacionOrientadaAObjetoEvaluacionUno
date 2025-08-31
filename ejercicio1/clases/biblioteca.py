@@ -1,27 +1,10 @@
-# archivo: ejercicio1/libro.py
-
-class Libro:
-    def __init__(self, titulo, autor, copias):
-        self.titulo = titulo
-        self.autor = autor
-        self.copias = copias
-
-    def prestar(self):
-        if self.copias > 0:
-            self.copias -= 1
-            return True
-        return False
-
-    def devolver(self):
-        self.copias += 1
-
-
+ # crear clase libros, con estructura ya vista, modelo contructor.
 class Biblioteca:
     def __init__(self):
         self.libros = []
 
     def agregar(self, libro):
-        self.libros.append(libro)
+        self.libros.append(libro)  # .append () agregara un libro.
 
     def prestar(self, titulo):
         for libro in self.libros:
