@@ -51,4 +51,30 @@ miCurso.listarAlumnos(alumnoUno)
 
 # ~ Expulsamos a una por desordenada
 miCurso.removerAlumnos(alumnoDos)   
- 
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 03 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio03.PedidoEItem import Item, Pedido
+
+# ~ Creamos un objeto Item (basado en hechos realesxd)
+itemUno = Item("Centella Tone Brightening Ampoule", 19.990, 2) 
+itemDos = Item("Retinol 0,1% Bakuchiol Cica Serum", 16.490, 1)
+itemTres = Item("VT Vital Cream 50ml", 5590, 4)
+
+# ~ Consultamos el valor y cantidad disponible de cada item
+print(itemUno.consultar())
+print(itemDos.consultar())   
+print(itemTres.consultar())
+
+# ~ Creamos un objeto Pedido
+miPedido = Pedido(1)
+
+# ~ Agregamos los items al pedido
+miPedido.sumarItem(itemUno)
+miPedido.sumarItem(itemDos)
+miPedido.sumarItem(itemTres)    
+
+# ~ Mostramos la boleta del pedido
+miPedido.boleta()
+
+# ~ Mostramos el total del pedido
+print(f"Total del pedido: ${miPedido.calcularTotal()}")
