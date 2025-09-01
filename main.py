@@ -33,7 +33,23 @@ curso_basico = curso("Serigrafia")
 curso_basico.inscribir(alumno1)
 curso_basico.inscribir(alumno2)
 curso_basico.inscribir(alumno3)
-
 curso_basico.remover(alumno2)
 
 curso_basico.listar_alumno()
+
+## ===== desarrollo ejercicio_3 ===== ##
+
+##from ejercicio_3.pedido_item import item, pedido
+
+##mi_pedido = pedido(item1)
+##item1 = item("celular", 100000, 6)
+##item2 = item("laptop", 150000, 4)
+##item3 = item("tablet", 180000, 8)
+
+##mi_pedido.agregar_item(item1)
+##mi_pedido.agregar_item(item2)
+##mi_pedido.agregar_item(item3)
+
+##mi_pedido.calculo_total()
+
+

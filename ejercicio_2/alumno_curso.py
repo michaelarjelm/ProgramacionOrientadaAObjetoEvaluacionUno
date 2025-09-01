@@ -22,7 +22,7 @@ class curso:
             
             print(f"- Se ha removido exitosamente a {alumno.nombre} del curso de {self.nombre}:")
             
-            print ("__________________________________")
+            print ("___________________________________")
         
     def listar_alumno(self):
         print(f"- Listado de alumnos en el curso {self.nombre}:")
@@ -30,19 +30,6 @@ class curso:
             print("No hay alumno inscrito")
         for alumno in self.alumnos:
             print(f"{alumno.nombre}")
-##creacion de los metodos 
-alumno1 = alumno("Samuel Morales")
-alumno2 = alumno("Camilo Candia")
-alumno3 = alumno("Joaquin Navarrete")
 
-curso_basico = curso("Serigrafia")
-  
-curso_basico.inscribir(alumno1)
-curso_basico.inscribir(alumno2)
-curso_basico.inscribir(alumno3)
-
-curso_basico.remover(alumno2)
-
-curso_basico.listar_alumno()
 
 
