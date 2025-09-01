@@ -96,4 +96,17 @@ mainCatalogo.agregar(pelicula1)
 mainCatalogo.agregar(pelicula2)
 mainCatalogo.agregar(pelicula3)
 
-mainCatalogo.filtrar(pelicula1)
+mainCatalogo.listar()
+
+peliculasAnimacion = mainCatalogo.filtrar("Animación")
+print("Películas Tipo Animación:")
+if peliculasAnimacion:
+    for pelicula in peliculasAnimacion:
+        print (f"Título: {pelicula.titulo}, Género: {pelicula.genero}, Año: {pelicula.año}")
+else: "No se encontraron películas de este género"
+
+pelicula_buscada = mainCatalogo.buscar("tarzan")
+if pelicula_buscada:
+    print(f"Película encontrada: {pelicula_buscada.titulo} ({pelicula_buscada.genero}, {pelicula_buscada.año})")
+else:
+    print(" La película no se encontró en el catálogo.")

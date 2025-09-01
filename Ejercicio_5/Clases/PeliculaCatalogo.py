@@ -11,16 +11,18 @@ class Catalogo:
 
     def agregar (self, pelicula: Pelicula):
         self.listadoPelicula[pelicula.titulo] = pelicula
-        print (f"Se agregó: {pelicula.titulo}a tu catálogo")
+        print (f"Se agregó: {pelicula.titulo} a tu catálogo")
 
-    def filtrar(self, pelicula: Pelicula, genero):
+    def filtrar(self, genero):
+        peliculasFiltradas = []
         for pelicula in self.listadoPelicula.values():
             if pelicula.genero.lower() == genero.lower():
-                print (f"Película '{pelicula.titulo}' encontrada en género: {pelicula.genero}")
-            else:
-                print (f"Película no encontrada bajo ningún filtro")
-        return (f"No se encontró la película")
+                peliculasFiltradas.append(pelicula)
+        return peliculasFiltradas
 
-    #def buscar (self):
+    def buscar (self, titulo):
+        return self.listadoPelicula.get(titulo.lower())
     
-    #def listar (self):
+    def listar (self):
+        for pelicula in self.listadoPelicula.values():
+            print (f"Título: {pelicula.titulo}, Género: {pelicula.genero}, Año: {pelicula.año}")
