@@ -78,3 +78,22 @@ miPedido.boleta()
 
 # ~ Mostramos el total del pedido
 print(f"Total del pedido: ${miPedido.calcularTotal()}")
+
+
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 04 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio04.SensorYMediciones import Sensor
+import random
+
+# ~ Creamos un objeto Sensor
+sensorJavi = Sensor("Bateria") # ZzZzZz
+
+# ~ Simulamos la obtención de 10 mediciones aleatorias
+for _ in range(10):
+    valorMedido = random.uniform(0, 100)  # Genera un valor float aleatorio entre 0 y 100 (mi porcentaje de batería a esta hora)
+    sensorJavi.medicionesObtenidas(valorMedido) 
+# ~ Mostramos las métricas del sensor
+sensorJavi.metricas()
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 05 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+
