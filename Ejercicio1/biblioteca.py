@@ -1,5 +1,6 @@
 class Biblioteca:
-    def __init__(self):
+    def __init__(self, nombre):
+        self.nombre = nombre
         self.libros = []
 
     def agregar_libro(self, libro):

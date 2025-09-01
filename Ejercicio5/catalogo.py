@@ -1,10 +1,11 @@
 class Catalogo:
-    def __init__(self):
+    def __init__(self, nombre):
+        self.nombre = nombre
         self.catalogo = []
 
     def agregar_pelicula(self, nombre_pelicula):
         self.catalogo.append(nombre_pelicula)
-
+            
     def filtrar_por_genero(self, genero):
         if self.catalogo:
             peliculas_filtradas = []
@@ -21,21 +22,13 @@ class Catalogo:
         else:
             print("\n-- El catalogo esta vacio --")
 
-    def buscar_por_titulo(self, titulo):
+    def buscar_por_titulo(self, pelicula):
         if self.catalogo:
-            resultado_busqueda = []
-            for pelicula in self.catalogo:
-                if titulo == pelicula.titulo:
-                    resultado_busqueda.append(pelicula.titulo)
-                    resultado_busqueda.append(pelicula.año)
-                    resultado_busqueda.append(pelicula.genero)
-            if resultado_busqueda:
-                print("\n*** Resultado de la busqueda ***\n")
-                print(f"* Titulo: {resultado_busqueda[0]}\n* Año: {resultado_busqueda[1]}\n* Genero: {resultado_busqueda[2]}")
+            if pelicula in self.catalogo:
+                print("\n-- Resultado de la busqueda: \n")
+                print(f"* Titulo: {pelicula.titulo} | Genero: {pelicula.genero} | Año: {pelicula.año}")
             else:
-                print("\n-- Pelicula no encontrada --")
-        else:
-            print("-- Catalogo vacio --")
+                print("Pelicula no encontrada")  
 
     def listar_peliculas(self):
         print("\n--- Catalogo de peliculas ---\n")

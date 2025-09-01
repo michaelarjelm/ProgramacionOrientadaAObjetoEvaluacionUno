@@ -9,8 +9,8 @@ from Ejercicio5.catalogo import Catalogo
 from Ejercicio5.pelicula import Pelicula
 # from Ejercicio6.auth import
 # from Ejercicio6.usuario import
-# from Ejercicio7.agenda import
-# from Ejercicio7.contacto import
+from Ejercicio7.agenda import Agenda
+from Ejercicio7.contacto import Contacto
 # from Ejercicio8.mesa import
 # from Ejercicio8.restaurante import
 # from Ejercicio9.carrito import
@@ -32,7 +32,7 @@ libro1 = Libro("Nubes de talco", "Amanda Baeza", 5)
 libro2 = Libro("Peklo", "Sukinapan", 7)
 libro3 = Libro("Tekkonkinkreet", "Taiyo Matsumoto", 3)
 
-bibliobus = Biblioteca()
+bibliobus = Biblioteca("Bibliobus")
 
 bibliobus.agregar_libro(libro1)
 bibliobus.agregar_libro(libro2)
@@ -63,7 +63,7 @@ item1 = Item("lapiz", 1200, 6)
 item2 = Item("libreta", 4600, 8)
 item3 = Item("pila AA", 800, 4)
 
-pedido1 = Pedido()
+pedido1 = Pedido("Compras clases")
 
 pedido1.agregar_item(item1)
 pedido1.agregar_item(item2)
@@ -91,20 +91,35 @@ peli2 = Pelicula("Robot carnival", "ciencia ficcion", 1987)
 peli3 = Pelicula("Atlantis", "aventura", 2001)
 peli4 = Pelicula("Perfect blue", "misterio", 1997)
 
-animacion = Catalogo()
+catalogo = Catalogo("Animacion")
 
-animacion.agregar_pelicula(peli1)
-animacion.agregar_pelicula(peli2)
-animacion.agregar_pelicula(peli3)
-animacion.agregar_pelicula(peli4)
+catalogo.agregar_pelicula(peli1)
+catalogo.agregar_pelicula(peli2)
+catalogo.agregar_pelicula(peli3)
+catalogo.agregar_pelicula(peli4)
 
-animacion.filtrar_por_genero("ciencia ficcion")
-animacion.buscar_por_titulo("Atlantis")
-animacion.listar_peliculas()
+genero = "ciencia ficcion"
+catalogo.filtrar_por_genero(genero)
+catalogo.buscar_por_titulo(peli1)
+catalogo.listar_peliculas()
 
 # print("\n\t==== Ejercicio 6: Desarrollo ====")
 
-# print("\n\t==== Ejercicio 7: Desarrollo ====")
+print("\n\t==== Ejercicio 7: Desarrollo ====")
+
+contacto1 = Contacto("Alondra Gonzalez", 66857743, "alondra@correo.cl")
+contacto2 = Contacto("Rovin Gatica", 23564478, "rovin@correo.cl")
+contacto3 = Contacto("Diego Foster",88659301,"diego@correo.cl")
+
+personal = Agenda("personal")
+
+personal.agregar_contacto(contacto1)
+personal.agregar_contacto(contacto2)
+personal.agregar_contacto(contacto3)
+
+personal.buscar_contacto(contacto2)
+personal.eliminar_contacto(contacto1)
+personal.listar_contactos()
 
 # print("\n\t==== Ejercicio 8: Desarrollo ====")
 

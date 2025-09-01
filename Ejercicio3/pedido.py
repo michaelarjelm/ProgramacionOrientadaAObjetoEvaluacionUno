@@ -1,5 +1,6 @@
 class Pedido:
-    def __init__(self):
+    def __init__(self, nombre):
+        self.nombre = nombre
         self.items = []
 
     def agregar_item(self, item):
