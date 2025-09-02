@@ -1,23 +1,27 @@
 #Ejercicio 1
 
-
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio1.Clases import Biblioteca, Libro
-
-
+from ProgramacionOrientadaAObjetoEvaluacionUno.ejercicio1.Clases.biblioteca import Biblioteca
+from ProgramacionOrientadaAObjetoEvaluacionUno.ejercicio1.Clases.libro import Libro
 
 Biblioteca1 = Biblioteca()
+
 Biblioteca1.agregar(Libro("Papelucho","Marcela Paz", 15))
 Biblioteca1.agregar(Libro("Los python","Carlos Blanco", 15))
 
 Biblioteca1.mostrar()
+
 Biblioteca.prestamo(Biblioteca1, "Papelucho")
+
 Biblioteca1.mostrar()
+
 Biblioteca.devolver(Biblioteca1, "Papelucho")
+
 Biblioteca1.mostrar()
 
 #Ejercicio 2
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio2.Clases import Grupo
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio14.Clases.pregunta import Pregunta
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio2.Clases.grupo import Grupo
 
 grupo1 = Grupo ("Programacion")
 
@@ -34,7 +38,8 @@ grupo1.mostrar()
 
 #Ejercicio 3
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio3.Clases import Item, Pedido
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio3.Clases.item import Item
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio3.Clases.pedido import Pedido
 
 item1 = Item("Computador", 3, 2)
 
@@ -42,7 +47,7 @@ pedido = Pedido(item1)
 
 #Ejercicio 4
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio4 import Sensor
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio4.Clases.sensor import Sensor
 
 sensor1 = Sensor
 
@@ -56,8 +61,8 @@ print("Minimo:", sensor1.minimo())
 
 #Ejercicio 5
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio5.Clases import Pelicula
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio5.Clases.catalogo import Catalogo
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio5.Clases.catalogo import Catalogo
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio5.Clases.pelicula import Pelicula
 
 catalogo1 = Catalogo
 
@@ -86,7 +91,7 @@ catalogo1.lista_completa()
 
 #Ejercicio 6
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio6.Clases import Auth
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio6.Clases.auth import Auth
 
 auth1 = Auth()
 
@@ -98,7 +103,8 @@ print(auth1.acceso("Edgar2", "Contraseña equivocada"))
 
 #Ejercicio 7
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio7.Clases.agenda import Agenda
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio7.Clases.agenda import Agenda
+
 
 agenda1 = Agenda()
 
@@ -117,7 +123,7 @@ agenda1.listar_contactos()
 
 #Ejercicio 8
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio8.Clases import Restaurante
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio8.Clases import Restaurante
 
 restaurante1 = Restaurante()
 
@@ -133,9 +139,8 @@ restaurante1 = Restaurante()
 
 #Ejercicio 9
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio9.Clases import carrito
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio9.Clases.carrito import Carrito
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio9.Clases.producto import Producto
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio9.Clases.carrito import Carrito
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio9.Clases.producto import Producto
 
 producto1 = Producto("Detergente", 20)
 producto2 = Producto("Papel", 45)
@@ -145,7 +150,7 @@ carrito1 = Carrito()
 carrito1.agregar_producto(producto1, 3)
 carrito1.agregar_producto(producto2, 2)
 
-total = carrito.calcular_total()
+total = carrito1.calcular_total()
 print(f"Total sin descuento: ${total}")
 
 total_con_dsto = carrito1.aplica_descuento(10)
@@ -153,7 +158,7 @@ print(f"Total con descuento aplicado: ${total_con_dsto}")
 
 #Ejercicio 10
 
-from ProgramacionOrientadaAObjetoEvaluacionUno.POO.Ejercicio10.Clases import Estudiante
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio10.Clases.estudiante1 import Estudiante
 
 estudiante1 = Estudiante("Bastian Guajardo")
 
@@ -167,6 +172,63 @@ promedio = estudiante1.calcular_promedio()
 print(f"El promedio del estudiante: {estudiante1.nombre} es: {promedio}")
 
 #Ejercicio 11
+
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio11.Clases.empresa import Empresa
+
+empresa1 =Empresa()
+
+empresa1.contratar("Andres", 5000)
+empresa1.contratar("Daniella", 10000)
+empresa1.contratar("Joaquin", 25000)
+empresa1.contratar("Anais", 15000)
+
+empresa1.listar_empleados()
+
+empresa1.gasto_total()
+
 #Ejercicio 12
+
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio12.Clases.banco import Banco
+
+banco1 = Banco()
+
+banco1.abrir_cuenta("Juan", 12000)
+banco1.abrir_cuenta("Matias", 2000000)
+
+banco1.mostrar_estado_cuentas()
+
+banco1.transferir("Matias", "Juan", 1000)
+
+banco1.mostrar_estado_cuentas()
+
 #Ejercicio 13
+
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio13.Clases.mascota import Mascota
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio13.Clases.veterinaria import Veterinaria
+
+if __name__ == "__main__":
+    veterinaria1 = Veterinaria()
+
+    veterinaria1.registrar_mascota(Mascota("Firulais", "Perro", 5))
+    veterinaria1.registrar_mascota(Mascota("Michi", "Gato", 3))
+    veterinaria1.registrar_mascota(Mascota("Lola", "Conejo", 2))
+
+    veterinaria1.buscar_por_nombre("Michi")
+
+    veterinaria1.listar_mascotas()
+
+    veterinaria1.edad_promedio()
+
 #Ejercicio 14
+
+
+from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio14.Clases.examen import Examen
+
+examen1 = Examen()
+
+examen1.agregar_preguntar(Pregunta("¿Capital de Chile", "Santiago"))
+examen1.agregar_preguntar(Pregunta("¿Capital de Peru", "Lima"))
+
+examen1.listar_preguntas()
+
+print("Total de preguntas: ", examen1.contar_preguntas())
