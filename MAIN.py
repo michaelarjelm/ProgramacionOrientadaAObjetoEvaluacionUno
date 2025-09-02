@@ -103,10 +103,68 @@ print("Películas Tipo Animación:")
 if peliculasAnimacion:
     for pelicula in peliculasAnimacion:
         print (f"Título: {pelicula.titulo}, Género: {pelicula.genero}, Año: {pelicula.año}")
-else: "No se encontraron películas de este género"
+else: 
+    print("No se encontraron películas de este género")
 
-pelicula_buscada = mainCatalogo.buscar("tarzan")
+pelicula_buscada = mainCatalogo.buscar("La Sirenita")
 if pelicula_buscada:
     print(f"Película encontrada: {pelicula_buscada.titulo} ({pelicula_buscada.genero}, {pelicula_buscada.año})")
 else:
-    print(" La película no se encontró en el catálogo.")
+    print("La película no se encontró en el catálogo.")
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 6 : USUARIO Y AUTENTICACION
+
+from Ejercicio_6.Clases.UsuarioAutenticacion import Usuario, Auth
+
+usuario1 = Usuario("Abdiaz", "123456789")
+autenticacion = Auth()
+
+autenticacion.registrar("javiera","987654321")
+
+autenticacion.login("Abdiaz", "123456789")
+autenticacion.login("", "")
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 7 : AGENDA Y CONTACTO
+
+from Ejercicio_7.Clases.AgendaContacto import Contacto, Agenda
+
+contacto1 = Contacto("Andrea", "987654321", "andrea@gmail.com")
+contacto2 = Contacto("Javiera", "123456789", "javiera@gmail.com")
+contacto3 = Contacto("Dayane", "456789123", "dayane@gmail.com")
+
+agenda = Agenda()
+
+agenda.agregar(contacto1)
+agenda.agregar(contacto2)
+agenda.agregar(contacto3)
+
+buscarContacto = agenda.buscar("javiera")
+if buscarContacto:
+    print(f"Contacto encontrado: Nombre: {buscarContacto.nombre}, Teléfono: {buscarContacto.telefono}, Correo: {buscarContacto.correo}")
+else: 
+    print("Contacto no encontrado en tu agenda")
+
+agenda.eliminar("andrea")
+
+agenda.listar()
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 7 : RESTAURANTE Y MESAS
+
+from Ejercicio_8.Clases.RestauranteMesaReserva import Mesa, Restaurante
+
+mesa1 = Mesa(1, 4, True)
+mesa2 = Mesa(2, 2, True)
+mesa3 = Mesa(3, 6, False)
+
+aperturaRestaurante = Restaurante()
+
+aperturaRestaurante.agregar(mesa1)
+aperturaRestaurante.agregar(mesa2)
+aperturaRestaurante.agregar(mesa3)
+
+aperturaRestaurante.reservar(2)
+aperturaRestaurante.reservar(3)
+aperturaRestaurante.reservar(4)

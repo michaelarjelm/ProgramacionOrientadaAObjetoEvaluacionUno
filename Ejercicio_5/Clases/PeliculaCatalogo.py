@@ -10,7 +10,7 @@ class Catalogo:
         self.listadoPelicula = {}
 
     def agregar (self, pelicula: Pelicula):
-        self.listadoPelicula[pelicula.titulo] = pelicula
+        self.listadoPelicula[pelicula.titulo.lower()] = pelicula
         print (f"Se agregó: {pelicula.titulo} a tu catálogo")
 
     def filtrar(self, genero):
