@@ -95,5 +95,38 @@ for _ in range(10):
 # ~ Mostramos las métricas del sensor
 sensorJavi.metricas()
 
+
 #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 05 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejerciocio05.PeliculaYCatalogo import Pelicula, Catalogo
+
+# ~ Creamos un objeto Catalogo
+miCatalogo = Catalogo()
+
+# ~ Creamos los objetos Pelicula
+peliculaUno = Pelicula("2001: Odisea del espacio", "Ciencia Ficción", 1968)
+peliculaDos = Pelicula("Batman: El caballero de la noche", "Acción", 2008)
+peliculaTres = Pelicula("Interestelar", "Ciencia Ficción", 2014)
+peliculaCuatro = Pelicula("La La Land", "Musical", 2016)
+peliculaCinco = Pelicula("El Padrino", "Crimen", 1972)
+
+# ~ Agregamos las películas al catálogo
+miCatalogo.agregarPeliculas(peliculaUno)
+miCatalogo.agregarPeliculas(peliculaDos)
+miCatalogo.agregarPeliculas(peliculaTres)
+miCatalogo.agregarPeliculas(peliculaCuatro)
+miCatalogo.agregarPeliculas(peliculaCinco)
+
+# ~ Listamos las películas en el catálogo
+miCatalogo.listarPeliculas()
+
+# ~ Filtramos las películas por género
+miCatalogo.filtrarPorGenero("Ciencia Ficción")
+miCatalogo.filtrarPorGenero("Comedia") # ~ Este género no está en el catálogo
+
+# ~ Buscamos una película por título
+print(miCatalogo.buscarPorTitulo("Interestelar"))
+print(miCatalogo.buscarPorTitulo("¿Dónde están las rubias?")) # ~ Esta película no está en el catálogo, pero debería xd
+
+
+
 
