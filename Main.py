@@ -206,7 +206,6 @@ banco1.mostrar_estado_cuentas()
 from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio13.Clases.mascota import Mascota
 from ProgramacionOrientadaAObjetoEvaluacionUno.Ejercicio13.Clases.veterinaria import Veterinaria
 
-if __name__ == "__main__":
     veterinaria1 = Veterinaria()
 
     veterinaria1.registrar_mascota(Mascota("Firulais", "Perro", 5))
