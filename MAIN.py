@@ -151,7 +151,7 @@ agenda.eliminar("andrea")
 agenda.listar()
 
 #----------------------------------------------------------------------------------------------#
-#EJERCICIO 7 : RESTAURANTE Y MESAS
+#EJERCICIO 8 : RESTAURANTE Y MESAS
 
 from Ejercicio_8.Clases.RestauranteMesaReserva import Mesa, Restaurante
 
@@ -168,3 +168,24 @@ aperturaRestaurante.agregar(mesa3)
 aperturaRestaurante.reservar(2)
 aperturaRestaurante.reservar(3)
 aperturaRestaurante.reservar(4)
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 9 : CARRITO Y DESCUENTOS
+
+from Ejercicio_9.Clases.CarritoDescuento import Producto, Carrito
+
+Producto1 = Producto("Gloss", 2000)
+Producto2 = Producto("Sombra de ojos", 10000)
+Producto3 = Producto("Máscar de pestañas", 5000)
+
+carritoCompra = Carrito()
+
+carritoCompra.agregar(Producto1, 2)
+carritoCompra.agregar(Producto2, 1)
+carritoCompra.agregar(Producto3, 3)
+
+totalSinDescuento = carritoCompra.calcularTotal()
+print(f"El total del carrito es {totalSinDescuento}")
+
+totalConDescuento = carritoCompra.descuento(10)
+print (f"El total con descuento aplicado es: $ {totalConDescuento}")
