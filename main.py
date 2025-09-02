@@ -127,6 +127,25 @@ miCatalogo.filtrarPorGenero("Comedia") # ~ Este género no está en el catálogo
 print(miCatalogo.buscarPorTitulo("Interestelar"))
 print(miCatalogo.buscarPorTitulo("¿Dónde están las rubias?")) # ~ Esta película no está en el catálogo, pero debería xd
 
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 06 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio06.UsuarioYAutenticacion import Usuario, Auth 
+
+# ~ Creamos un objeto Auth
+sistemaAuth = Auth()
+
+# ~ Registramos usuarios
+usuarioUno = sistemaAuth.registrarUsuario("Javiera", "password123")
+usuarioDos = sistemaAuth.registrarUsuario("Andrea", "apartejefe123")
+usuarioTres = sistemaAuth.registrarUsuario("Dayane", "abc123xyz")
+
+# ~ Autenticamos usuarios
+sistemaAuth.autenticarUsuario("Javiera", "password123")  # ~ Credenciales correctas
+sistemaAuth.autenticarUsuario("Andrea", "meleocurriootraidea123")  # ~ Contraseña incorrecta
+sistemaAuth.autenticarUsuario("NonExistentUser", "nopassword")  # ~ Usuario no registrado
+sistemaAuth.autenticarUsuario("Dayane", "abc123xyz")  # ~ Credenciales correctas
+
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 07 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
 
 
 
