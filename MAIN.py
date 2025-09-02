@@ -185,7 +185,26 @@ carritoCompra.agregar(Producto2, 1)
 carritoCompra.agregar(Producto3, 3)
 
 totalSinDescuento = carritoCompra.calcularTotal()
-print(f"El total del carrito es {totalSinDescuento}")
+print(f"El total del carrito es: ${totalSinDescuento}")
 
-totalConDescuento = carritoCompra.descuento(10)
-print (f"El total con descuento aplicado es: $ {totalConDescuento}")
+totalConDescuento = carritoCompra.descuento(50)
+#print (f"El total con descuento aplicado es: $ {totalConDescuento}")
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 10 : ESTUDIANTE Y NOTAS
+
+from Ejercicio_10.Clases.EstudianteNota import Nota, Estudiante
+
+nota1 = Nota("Matemáticas", 45)
+nota2 = Nota("Historia", 68)
+nota3 = Nota("Lenguaje", 70)
+
+listaNotas = Estudiante("Andrea")
+
+listaNotas.agregarNota(nota1)
+listaNotas.agregarNota(nota2)
+listaNotas.agregarNota(nota3)
+
+listaNotas.promedio()
+
+listaNotas.mostrarNotas()
