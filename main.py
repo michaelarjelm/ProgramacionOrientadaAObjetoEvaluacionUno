@@ -176,6 +176,44 @@ miAgenda.eliminarContacto("Juan") # ~ Este contacto no está en la agenda
 miAgenda.mostrarContactos()
 
 #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 08 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio08.RestauranteMesaYReserva import Mesa, Restaurante
+
+# ~ Creamos un objeto Restaurante
+miRestaurante = Restaurante("Mesa que más aplauda")
+
+# ~ Creamos los objetos Mesa
+mesaUno = Mesa(1, 4)
+mesaDos = Mesa(2, 2)
+mesaTres = Mesa(3, 6)
+mesaCuatro = Mesa(4, 4)
+mesaCinco = Mesa(5, 8)
+
+# ~ Agregamos las mesas al restaurante
+miRestaurante.agregarMesa(mesaUno)
+miRestaurante.agregarMesa(mesaDos)
+miRestaurante.agregarMesa(mesaTres)
+miRestaurante.agregarMesa(mesaCuatro)
+miRestaurante.agregarMesa(mesaCinco)
+
+# ~ Mostramos el estado de las mesas
+miRestaurante.estadoMesas()
+
+# ~ Reservamos algunas mesas
+miRestaurante.reservar_mesa(2)
+miRestaurante.reservar_mesa(4)
+miRestaurante.reservar_mesa(6) # ~ Esta mesa no existe
+miRestaurante.reservar_mesa(2) # ~ Esta mesa ya está ocupada
+
+# ~ Mostramos el estado de las mesas después de las reservas
+miRestaurante.estadoMesas()
+
+# ~ Liberamos una mesa
+miRestaurante.liberarMesa(2)
+miRestaurante.liberarMesa(6) # ~ Esta mesa no existe
+miRestaurante.liberarMesa(2) # ~ Esta mesa ya está libre
+
+# ~ Mostramos el estado final de las mesas
+miRestaurante.estadoMesas()
 
 
 
