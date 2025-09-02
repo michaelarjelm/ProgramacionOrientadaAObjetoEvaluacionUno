@@ -6,7 +6,7 @@ class Ítem:
         self.precio = precio
         self.cantidad = cantidad
     
-    def Subtotal(self):
+    def subtotal(self):
         return self.precio * self.cantidad
     
 #Creamos el pedido
@@ -20,7 +20,7 @@ class Pedido:
         print(f'Has añadido "{item.cantidad}" al pedido de "{item.nombre}", con un monto de "{item.subtotal}".')
         
     def totalpedido(self):
-        total <= 0
+        total = 0
         for item in self.items:
             total += item.subtotal()
         return total
