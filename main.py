@@ -1,4 +1,4 @@
-# #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 01 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+ # #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 01 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
 # from ejercicio01.LibroYBiblioteca2 import Libro, Biblioteca
 
 # # ~ Creamos un objeto Biblioteca
@@ -145,75 +145,97 @@
 # sistemaAuth.autenticarUsuario("Dayane", "abc123xyz")  # ~ Credenciales correctas
 
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 07 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio07.AgendaYContacto import Agenda, Contacto
+# #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 07 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# from ejercicio07.AgendaYContacto import Agenda, Contacto
 
-# ~ Creamos un objeto Agenda
-miAgenda = Agenda()
+# # ~ Creamos un objeto Agenda
+# miAgenda = Agenda()
 
-# ~ Creamos los objetos Contacto
-contactoUno = Contacto("Javiera", "964135226", "javi@example.com")
-contactoDos = Contacto("Andrea", "987654321", "andrea@example.com")
-contactoTres = Contacto("Dayane", "954070706", "daya@example.com")
+# # ~ Creamos los objetos Contacto
+# contactoUno = Contacto("Javiera", "964135226", "javi@example.com")
+# contactoDos = Contacto("Andrea", "987654321", "andrea@example.com")
+# contactoTres = Contacto("Dayane", "954070706", "daya@example.com")
 
-# ~ Agregamos los contactos a la agenda
-miAgenda.agregarContacto(contactoUno)
-miAgenda.agregarContacto(contactoDos)
-miAgenda.agregarContacto(contactoTres)
+# # ~ Agregamos los contactos a la agenda
+# miAgenda.agregarContacto(contactoUno)
+# miAgenda.agregarContacto(contactoDos)
+# miAgenda.agregarContacto(contactoTres)
 
-# ~ Mostramos los contactos en la agenda
-miAgenda.mostrarContactos()
+# # ~ Mostramos los contactos en la agenda
+# miAgenda.mostrarContactos()
 
-# ~ Buscamos un contacto por nombre
-print(miAgenda.buscarContacto("Andrea"))
-print(miAgenda.buscarContacto("Pepito")) # ~ Este contacto no está en la agenda
+# # ~ Buscamos un contacto por nombre
+# print(miAgenda.buscarContacto("Andrea"))
+# print(miAgenda.buscarContacto("Pepito")) # ~ Este contacto no está en la agenda
 
-# ~ Eliminamos un contacto por nombre
-miAgenda.eliminarContacto("Dayane")
-miAgenda.eliminarContacto("Juan") # ~ Este contacto no está en la agenda
+# # ~ Eliminamos un contacto por nombre
+# miAgenda.eliminarContacto("Dayane")
+# miAgenda.eliminarContacto("Juan") # ~ Este contacto no está en la agenda
 
-# ~ Mostramos los contactos en la agenda después de eliminar
-miAgenda.mostrarContactos()
+# # ~ Mostramos los contactos en la agenda después de eliminar
+# miAgenda.mostrarContactos()
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 08 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio08.RestauranteMesaYReserva import Mesa, Restaurante
+# #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 08 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# from ejercicio08.RestauranteMesaYReserva import Mesa, Restaurante
 
-# ~ Creamos un objeto Restaurante
-miRestaurante = Restaurante("Mesa que más aplauda")
+# # ~ Creamos un objeto Restaurante
+# miRestaurante = Restaurante("Mesa que más aplauda")
 
-# ~ Creamos los objetos Mesa
-mesaUno = Mesa(1, 4)
-mesaDos = Mesa(2, 2)
-mesaTres = Mesa(3, 6)
-mesaCuatro = Mesa(4, 4)
-mesaCinco = Mesa(5, 8)
+# # ~ Creamos los objetos Mesa
+# mesaUno = Mesa(1, 4)
+# mesaDos = Mesa(2, 2)
+# mesaTres = Mesa(3, 6)
+# mesaCuatro = Mesa(4, 4)
+# mesaCinco = Mesa(5, 8)
 
-# ~ Agregamos las mesas al restaurante
-miRestaurante.agregarMesa(mesaUno)
-miRestaurante.agregarMesa(mesaDos)
-miRestaurante.agregarMesa(mesaTres)
-miRestaurante.agregarMesa(mesaCuatro)
-miRestaurante.agregarMesa(mesaCinco)
+# # ~ Agregamos las mesas al restaurante
+# miRestaurante.agregarMesa(mesaUno)
+# miRestaurante.agregarMesa(mesaDos)
+# miRestaurante.agregarMesa(mesaTres)
+# miRestaurante.agregarMesa(mesaCuatro)
+# miRestaurante.agregarMesa(mesaCinco)
 
-# ~ Mostramos el estado de las mesas
-miRestaurante.estadoMesas()
+# # ~ Mostramos el estado de las mesas
+# miRestaurante.estadoMesas()
 
-# ~ Reservamos algunas mesas
-miRestaurante.reservar_mesa(2)
-miRestaurante.reservar_mesa(4)
-miRestaurante.reservar_mesa(6) # ~ Esta mesa no existe
-miRestaurante.reservar_mesa(2) # ~ Esta mesa ya está ocupada
+# # ~ Reservamos algunas mesas
+# miRestaurante.reservar_mesa(2)
+# miRestaurante.reservar_mesa(4)
+# miRestaurante.reservar_mesa(6) # ~ Esta mesa no existe
+# miRestaurante.reservar_mesa(2) # ~ Esta mesa ya está ocupada
 
-# ~ Mostramos el estado de las mesas después de las reservas
-miRestaurante.estadoMesas()
+# # ~ Mostramos el estado de las mesas después de las reservas
+# miRestaurante.estadoMesas()
 
-# ~ Liberamos una mesa
-miRestaurante.liberarMesa(2)
-miRestaurante.liberarMesa(6) # ~ Esta mesa no existe
-miRestaurante.liberarMesa(2) # ~ Esta mesa ya está libre
+# # ~ Liberamos una mesa
+# miRestaurante.liberarMesa(2)
+# miRestaurante.liberarMesa(6) # ~ Esta mesa no existe
+# miRestaurante.liberarMesa(2) # ~ Esta mesa ya está libre
 
-# ~ Mostramos el estado final de las mesas
-miRestaurante.estadoMesas()
+# # ~ Mostramos el estado final de las mesas
+# miRestaurante.estadoMesas()
 
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 09 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio09.CarritoConDescuento import Producto, Carrito   
+# ~ Creamos un objeto Carrito
+miCarrito = Carrito()
+# ~ Creamos los objetos Producto
+productoUno = Producto("Notebook", 499990)
+productoDos = Producto("Smartphone", 259990)
+productoTres = Producto("Audífonos ANC", 54990)
+
+# ~ Agregamos productos al carrito
+miCarrito.agregarProducto(productoUno, 1)
+miCarrito.agregarProducto(productoDos, 2)
+miCarrito.agregarProducto(productoTres, 3)
+miCarrito.agregarProducto(productoDos, 1) # ~ Agregamos más unidades de un producto ya existente
+
+# ~ Calculamos el total sin descuento
+totalSinDescuento = miCarrito.calcularTotal()
+print(f"Total sin descuento: ${totalSinDescuento}")
+
+# ~ Calculamos el total con un descuento del 10%
+totalConDescuento = miCarrito.calcularTotal(descuento=10)
+print(f"Total con descuento del 10%: ${totalConDescuento}")
 
 
