@@ -9,6 +9,7 @@ class Libro:
         self.copias = copias 
 
 class Biblioteca:
+    
     print("------Bienvenido a la biblioteca-------")
     
     def __init__ (self):
@@ -23,8 +24,8 @@ class Biblioteca:
         print(f"-Te hemos prestado el libro: {libro.titulo}")
         return
     
-    print("---------------------------------------")
-               
+    print("___________________________________________________________________________________________")
+   
     def devolver(self, titulo):
         for libro in self.libros:
             if libro.titulo == titulo:
@@ -37,9 +38,8 @@ class Biblioteca:
             print(f"- Autor del libro: {libro.autor}")
             print(f"- Copias disponibles: {libro.copias}")
             
-            print("---------------------------------")
-
-
+    print("___________________________________________________________________________________________")
+   
 
 
 

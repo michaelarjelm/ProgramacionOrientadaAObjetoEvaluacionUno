@@ -1,7 +1,7 @@
 ## ==== desarrollo de ejercicio_1 ==== ##
 print ("_______Ejercicio UNO_______")
 
-from  ejercicio_1.libro_biblioteca import Libro, Biblioteca
+from ejercicio_1.libro_biblioteca import Libro, Biblioteca
  
 mi_biblioteca = Biblioteca()
 
@@ -59,17 +59,48 @@ pedido1.agregaritem(item1)
 pedido1.agregaritem(item2)
 pedido1.agregaritem(item3)
 
-print("Total del pedido:", pedido1.totalpedido())
+print("EL total del pedido: $", pedido1.totalpedido(), "muchas gracias por tu compra.")
 
 
 ## ===== desarrollo ejercicio_4 ===== ##
+print ("_______Ejercicio CUATRO_______")
 
-s1= Sensor("Temperatura")
+from ejercicio_4.sensor_mediciones import Sensor
 
-s1.registrar(-10)
-s1.registrar(25)
-s1.registrar(30)
+s1 = Sensor("Termico")
+
+s1.registrar(27)
+s1.registrar(15)
+s1.registrar(-5)
 
 s1.promedio()
 s1.maximo()
 s1.minimo()
+
+
+## ===== desarrollo ejercicio 5 ===== ##
+print ("_______Ejercicio CINCO_______")
+
+from ejercicio_5.pelicula_catalogo import Pelicula, Catalogo
+
+pelicula1 = Pelicula("Matrix", "Ciencia Ficción", 1999)
+pelicula2 = Pelicula("El Padrino", "Drama", 1972)
+pelicula3 = Pelicula("Toy Story", "Animación", 1995)
+
+catalogo = Catalogo()
+catalogo.agregar_pelicula(pelicula1)
+catalogo.agregar_pelicula(pelicula2)
+catalogo.agregar_pelicula(pelicula3)
+
+print("Todas las películas:")
+catalogo.listar_todas()
+
+print(" Buscar por título 'Matrix:")
+for p in catalogo.buscar_por_titulo("Matrix"):
+    print(p)
+
+print(" Filtrar por género 'Drama:")
+for p in catalogo.filtrar_por_genero("Drama"):
+    print(p)
+
+

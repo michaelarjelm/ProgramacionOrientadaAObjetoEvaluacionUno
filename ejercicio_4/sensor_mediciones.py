@@ -8,23 +8,23 @@ class Sensor:
 
     def registrar (self, medicion):
         self.listaMediciones.append (medicion)
-        print (f"Has registrado un valor de {medicion} en el sensor de: {self.nombre} ")
-
+        print("___________________________________________________________________________________________")
+        print (f"-Se ha registrado una Tº de: {medicion} grados en el sensor {self.nombre} el dia de hoy.")
+        
     def promedio (self):
-        self.promMedicion = sum(self.listaMediciones) / len(self.listaMediciones)    
-        print (f"El promedio es: {self.promMedicion}")    
+        self.promMedicion = round(sum(self.listaMediciones) / len(self.listaMediciones), 1)
+        print (f"-El promedio de hoy es: {self.promMedicion}")    
 
     def maximo (self):
        self.maxMedicion = max(self.listaMediciones)
-       print (f"El valor máximo es: {self.maxMedicion}")
-    
+       print (f"-El valor máximo de hoy es: {self.maxMedicion}, mantente hidratado.")
     def minimo (self):
-        self.minMedicion = min(self.listaMediciones)
-        print (f" El valor mínimo es : {self.minMedicion}")
+       self.minMedicion = min(self.listaMediciones)
+       print (f"-El valor mínimo de hoy es: {self.minMedicion}, sal abrigado.")
+       print("___________________________________________________________________________________________")
    
 
 
-    
   
 
     

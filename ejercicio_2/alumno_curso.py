@@ -19,11 +19,13 @@ class curso:
         if alumno in self.alumnos:
             self.alumnos.remove(alumno)
             
-            print("____________________________________")
+            print("___________________________________________________________________________________________")
+   
             
             print(f"- Se ha removido exitosamente a {alumno.nombre} del curso de {self.nombre}:")
             
-            print ("___________________________________")
+            print("___________________________________________________________________________________________")
+   
         
     def listar_alumno(self):
         print(f"- Listado de alumnos en el curso {self.nombre}:")
