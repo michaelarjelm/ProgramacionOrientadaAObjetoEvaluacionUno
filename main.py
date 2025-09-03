@@ -131,42 +131,143 @@
 
 
 # creamos el import 
-from ejercicio6.clases.Auth import Auth
+# from ejercicio6.clases.Auth import Auth
+
+# if __name__ == "__main__":
+#     sistema = Auth()
+# # creamos esta condicion, mientras la condicion sea verdadera.
+#     while True:
+#         print("\n--- Sistema de Autenticación ---")
+#         print("1. Registrar usuario")
+#         print("2. Iniciar sesión")
+#         print("3. Salir")
+#         opcion = input("Elige una opción: ")
+# #le damos los valores a las opciones, si indica opcion uno entonses se mostrara el menu para registrarse 
+#         if opcion == "1":
+#             usuario = input("Ingrese nombre de usuario: ")
+#             clave = input("Ingrese contraseña: ")
+#             if sistema.registrar(usuario, clave):
+#                 print("Usuario registrado con éxito.")
+#             else:
+#                 print("Ese usuario ya existe.")
+# # la opcion dos iniciara la sesion con lso datos ya guardados. el else es por si ingreso mal el nombre de usuario o la contarseña de mostrara un mensaje 
+# # que indique que esta incorrecto 
+#         elif opcion == "2":
+#             usuario = input("Usuario: ")
+#             clave = input("Contraseña: ")
+#             if sistema.login(usuario, clave):
+#                 print("Inicio de sesión correcto. Bienvenido", usuario)
+#             else:
+#                 print("Usuario o contraseña incorrectos.")
+# # opcion tres hace que salga de la condicion y finalice el menu 
+# # si el ususario ingresa por ejemplo un 4 se mostrara un  mensaje que diga opcion ingresada no valida 
+#         elif opcion == "3":
+#             print("Saliendo del sistema...")
+#             break
+
+#         else:
+#             print("Opción ingresada no válida.")
+
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+
+#Ejercicio Numero 7 
+
+
+# main.py
+# from ejercicio7.clases.Agenda import Agenda
+
+# if __name__ == "__main__":
+#     agenda = Agenda()
+# # lo mismo que el ejercicio anterior hacemos un menú para guardar, buscar o borarra contacto 
+#     while True:
+#         print("\n--- Agenda de Contactos ---")
+#         print("1. Agregar contacto")
+#         print("2. Buscar contacto")
+#         print("3. Eliminar contacto")
+#         print("4. Listar contactos")
+#         print("5. Salir")
+#         opcion = input("Elige una opción: ")
+
+#         if opcion == "1":
+#             nombre = input("Nombre: ")
+#             telefono = input("Teléfono: ")
+#             correo = input("Correo: ")
+#             if agenda.agregar(nombre, telefono, correo):
+#                 print("Contacto agregado correctamente.")
+#             else:
+#                 print("Ese contacto ya existe.")
+
+#         elif opcion == "2":
+#             nombre = input("Nombre a buscar: ")
+#             contacto = agenda.buscar(nombre)
+#             if contacto:
+#                 print("T contacto fue Encontrado:", contacto)
+#             else:
+#                 print("Ups!! No se encontró ese contacto.")
+
+#         elif opcion == "3":
+#             nombre = input("Nombre a eliminar: ")
+#             if agenda.eliminar(nombre):
+#                 print("El contacto eliminado correctamente2.")
+#             else:
+#                 print("No se encontró ese contacto.")
+
+#         elif opcion == "4":
+#             contactos = agenda.listar()
+#             if contactos:
+#                 print("\nLista de contactos:")
+#                 for c in contactos:
+#                     print("-", c)
+#             else:
+#                 print("Agenda vacía.")
+
+#         elif opcion == "5":
+#             print("Saliendo de la agenda...")
+#             break
+
+#         else:
+#             print("Opción no válida.")
+
+
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+
+
+# Ejercicio número 8 
+#Crear Clase Mesa Y Restaurante 
+
+# creamos el from import del restaurante 
+from ejercicio8.clases.Restaurante import Restaurante
 
 if __name__ == "__main__":
-    sistema = Auth()
-# creamos esta condicion, mientras la condicion sea verdadera.
+    restaurante = Restaurante()
+# repetimos el mismo menu de los otros ejercicios, misma dinamica, del while true para que se mantenga el menú. 
     while True:
-        print("\n--- Sistema de Autenticación ---")
-        print("1. Registrar usuario")
-        print("2. Iniciar sesión")
-        print("3. Salir")
-        opcion = input("Elige una opción: ")
-#le damos los valores a las opciones, si indica opcion uno entonses se mostrara el menu para registrarse 
-        if opcion == "1":
-            usuario = input("Ingrese nombre de usuario: ")
-            clave = input("Ingrese contraseña: ")
-            if sistema.registrar(usuario, clave):
-                print("Usuario registrado con éxito.")
-            else:
-                print("Ese usuario ya existe.")
-# la opcion dos iniciara la sesion con lso datos ya guardados. el else es por si ingreso mal el nombre de usuario o la contarseña de mostrara un mensaje 
-# que indique que esta incorrecto 
-        elif opcion == "2":
-            usuario = input("Usuario: ")
-            clave = input("Contraseña: ")
-            if sistema.login(usuario, clave):
-                print("Inicio de sesión correcto. Bienvenido", usuario)
-            else:
-                print("Usuario o contraseña incorrectos.")
-# opcion tres hace que salga de la condicion y finalice el menu 
-# si el ususario ingresa por ejemplo un 4 se mostrara un  mensaje que diga opcion ingresada no valida 
-        elif opcion == "3":
-            print("Saliendo del sistema...")
+        print("\n--- Restaurante ---")
+        print("1. Agregar mesa")
+        print("2. Reservar mesa")
+        print("3. Liberar mesa")
+        print("4. Mostrar mesas")
+        print("5. Salir")
+        op = input("Opción: ")
+
+        if op == "1":
+            n = int(input("Número de mesa: "))
+            c = int(input("Capacidad: "))
+            restaurante.agregar_mesa(n, c)
+        elif op == "2":
+            n = int(input("Numero de mesa que desea reservar: "))
+            print("Reservada" if restaurante.reservar(n) else "No disponible")
+        elif op == "3":
+            n = int(input("Mesa a liberar: "))
+            print("Liberada" if restaurante.liberar(n) else "No se pudo liberar")
+        elif op == "4":
+            restaurante.mostrar()
+        elif op == "5":
             break
-
         else:
-            print("Opción ingresada no válida.")
-
-
+            print("Opción inválida")
 
