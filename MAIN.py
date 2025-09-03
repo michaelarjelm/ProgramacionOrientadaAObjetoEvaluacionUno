@@ -247,3 +247,28 @@ banco.transferir("Andrea", "Javiera", 200000)
 banco.transferir("Andrea", "Javiera", 500000)
 
 
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 13: MASCOTA Y VETERINARIA
+
+from Ejercicio_13.Clases.VeterinariaMascotas import Mascota, Veterinaria
+
+mascota1 = Mascota("Yui", "Perrita", 12)
+mascota2 = Mascota("Nimona", "Gatita", 1)
+mascota3 = Mascota("Manchita", "Gatita", 8)
+
+listaVetrinaria = Veterinaria()
+
+listaVetrinaria.registrar(mascota1)
+listaVetrinaria.registrar(mascota2)
+listaVetrinaria.registrar(mascota3)
+
+buscarMascota = listaVetrinaria.buscar("nimona")
+if buscarMascota:
+    print(f"Mascota encontrada: Nombre: {buscarMascota.nombre}, Especie: {buscarMascota.especie}, Edad: {buscarMascota.edad} años")
+else:
+    print("Mascota no encontrada en la veterinaria")
+
+listaVetrinaria.listar()
+
+edadPromedio = listaVetrinaria.edadPromedio()
+print (f"La edad promedio de las mascotas es de: {edadPromedio} años")
