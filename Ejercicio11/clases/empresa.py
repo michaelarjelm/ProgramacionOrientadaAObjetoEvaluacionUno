@@ -1,4 +1,5 @@
 from math import trunc
+
 class Empresa:
     def __init__(self, nombre):
         self.nombre = nombre

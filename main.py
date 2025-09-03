@@ -19,8 +19,8 @@ from Ejercicio10.clases.estudiante import Estudiante
 from Ejercicio10.clases.nota import Nota
 from Ejercicio11.clases.empleado import Empleado
 from Ejercicio11.clases.empresa import Empresa
-# from Ejercicio12.clases.banco import
-# from Ejercicio12.clases.cuenta import
+from Ejercicio12.clases.banco import Banco
+from Ejercicio12.clases.cuenta import Cuenta
 # from Ejercicio13.clases.mascota import
 # from Ejercicio13.clases.veterinaria import
 # from Ejercicio14.clases.examen import
@@ -38,9 +38,11 @@ bibliobus = Biblioteca("Bibliobus")
 
 bibliobus.agregar_libro(libro1)
 bibliobus.agregar_libro(libro2)
-
+print("--------------------------------")
 bibliobus.prestamo(libro1, 3)
+print("--------------------------------")
 bibliobus.devolucion(libro1, 2)
+print("--------------------------------")
 bibliobus.listar_libros()
 
 print("\n\t==== Ejercicio 2: Alumno y Curso ====")
@@ -53,9 +55,9 @@ curso = Curso("Ilustracion")
 
 curso.inscribir_alumno(alumno1)
 curso.inscribir_alumno(alumno2)
-
+print("--------------------------------")
 curso.listar_alumnos()
-
+print("--------------------------------")
 curso.remover_alumno(alumno3)
 curso.remover_alumno(alumno1)
 
@@ -70,7 +72,7 @@ pedido1 = Pedido("Compras clases")
 pedido1.agregar_item(item1)
 pedido1.agregar_item(item2)
 pedido1.agregar_item(item3)
-
+print("--------------------------------")
 pedido1.calcular_total()
 
 print("\n\t==== Ejercicio 4: Sensor ====")
@@ -100,9 +102,10 @@ catalogo.agregar_pelicula(peli2)
 catalogo.agregar_pelicula(peli3)
 catalogo.agregar_pelicula(peli4)
 
-genero = "ciencia ficcion"
-catalogo.filtrar_por_genero(genero)
+catalogo.filtrar_por_genero("ciencia ficcion")
+print("--------------------------------")
 catalogo.buscar_por_titulo(peli1)
+print("--------------------------------")
 catalogo.listar_peliculas()
 
 print("\n\t==== Ejercicio 6: Usuario y Auth ====")
@@ -115,14 +118,16 @@ user4 = Usuario('marisol','asdfgh')
 data = Auth()
 
 data.login(user1,'qwertyu')
-
+print("--------------------------------")
 data.registrar_usuario(user1)
 data.registrar_usuario(user2)
 data.registrar_usuario(user3)
 data.registrar_usuario(user4)
-
+print("--------------------------------")
 data.login(user1,'123qwe')
+print("--------------------------------")
 data.login(user2,'asdasd')
+print("--------------------------------")
 data.login(user4,'asdfgh')
 
 
@@ -137,9 +142,11 @@ personal = Agenda("personal")
 personal.agregar_contacto(contacto1)
 personal.agregar_contacto(contacto2)
 personal.agregar_contacto(contacto3)
-
+print("--------------------------------")
 personal.buscar_contacto(contacto2)
+print("--------------------------------")
 personal.eliminar_contacto(contacto1)
+print("--------------------------------")
 personal.listar_contactos()
 
 print("\n\t==== Ejercicio 8: Mesa y Restaurante ====")
@@ -155,14 +162,16 @@ restaurante.agregar_mesa(mesa1)
 restaurante.agregar_mesa(mesa2)
 restaurante.agregar_mesa(mesa3)
 restaurante.agregar_mesa(mesa4)
-
+print("--------------------------------")
 restaurante.reservar_mesa(mesa2,10)
 restaurante.reservar_mesa(mesa2,8)
+
 restaurante.reservar_mesa(mesa4,1) 
 restaurante.reservar_mesa(mesa2,10)
 restaurante.reservar_mesa(mesa1,3)
-
+print("--------------------------------")
 restaurante.liberar_mesa(mesa2)
+print("--------------------------------")
 restaurante.mostrar_mesas()
 
 print("\n\t==== Ejercicio 9: Carrito y Producto ====")
@@ -179,11 +188,12 @@ super.agregar_producto(harina, 3)
 super.agregar_producto(aceite, 3)
 super.agregar_producto(leche, 12)
 super.agregar_producto(fideos, 5)
-
+print("--------------------------------")
 super.calcular_total()
-
+print("--------------------------------")
 super.aplicar_descuento(15, aceite)
 super.aplicar_descuento(20, leche)
+print("--------------------------------")
 super. calcular_total()
 
 print("\n\t==== Ejercicio 10: Estudiante y Nota ====\n")
@@ -199,8 +209,9 @@ estudiante.agregar_nota(nota1)
 estudiante.agregar_nota(nota2)
 estudiante.agregar_nota(nota3)
 estudiante.agregar_nota(nota4)
-
+print("--------------------------------")
 estudiante.mostrar_calificaciones()
+print("--------------------------------")
 estudiante.calcular_promedio()
 
 print("\n\t==== Ejercicio 11: Empleado y Empresa ====\n")
@@ -216,11 +227,33 @@ empresa.contratar(empleado1)
 empresa.contratar(empleado2)
 empresa.contratar(empleado3)
 empresa.contratar(empleado4)
-
+print("--------------------------------")
 empresa.listar_empleados()
+print("--------------------------------")
 empresa.calcular_sueldos()
 
-# print("\n\t==== Ejercicio 12: Cuenta y Banco ====")
+print("\n\t==== Ejercicio 12: Cuenta y Banco ====")
+
+cuenta1 = Cuenta('alondra', 850000)
+cuenta2 = Cuenta('marisol', 2540000)
+cuenta3 = Cuenta('rovin', 1405800)
+cuenta4 = Cuenta('foster', 832000)
+
+banco = Banco()
+
+banco.ver_cuentas()
+print("--------------------------------")
+banco.abrir_cuenta(cuenta1)
+banco.abrir_cuenta(cuenta2)
+banco.abrir_cuenta(cuenta3)
+banco.abrir_cuenta(cuenta4)
+print("--------------------------------")
+banco.transferir(cuenta2, cuenta1,250000)
+print("--------------------------------")
+banco.buscar_cuenta(cuenta3)
+print("--------------------------------")
+banco.ver_cuentas()
+
 
 # print("\n\t==== Ejercicio 13: Mascota y Veterinaria ====")
 

@@ -1,4 +1,5 @@
 from math import trunc
+
 class Carrito:
     def __init__(self):
         self.carrito = []

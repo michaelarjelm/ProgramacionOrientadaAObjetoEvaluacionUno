@@ -14,10 +14,13 @@ class Veterinaria:
         self.pacientes = []
 
     def registrar(self, paciente):
-        pass
+        self.pacientes.append(paciente)
+        print(f"\nPaciente '{paciente.nombre}' registrado con exito.")
 
     def buscar(self, paciente):
-        pass
+        if self.pacientes:
+            if paciente in self.pacientes:
+                print("\n--- Resultado busqueda ---")
 
     def ver_pacientes(self):
         pass
