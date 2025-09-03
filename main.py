@@ -142,14 +142,14 @@
 #Sistema_auth = Auth()
 
 # Registro de usuarios
-#print('-------- Probando el registro------')
+#print('\n-------- Probando el registro------')
 #Sistema_auth.registrar_usuario('Dayane_Palma', 'guachupe123')
 #Sistema_auth.registrar_usuario('Juan_Perez', 'lacucarracha345')
 #Sistema_auth.registrar_usuario('Camila_Alvarez', 'papaya567')
 #Sistema_auth.registrar_usuario('Sofia_Navarrete', 'guacamayo789')
 
 # Comprobar inicio de sesion
-#print("------- Probando el inicio de sesion------")
+#print("\n------- Probando el inicio de sesion------")
 #Sistema_auth.login('Juan_Perez', 'lacucarracha345')
 #Sistema_auth.login('Sofia_Navarrete', 'guacamayo789')
 #Sistema_auth.login('Camila_Alvarez', 'papaya567')
@@ -216,7 +216,7 @@
 # Intentar reservar una mesa ya ocupada
 #Mi_restaurante.reservar_mesa(2)
 
-# Mostrar el estado actualizado
+# Mostrar el estado actualizado de las mesas
 #Mi_restaurante.mostrar_estado_mesas()
 
 # Liberar una mesa
@@ -230,4 +230,89 @@
 
 #-------------------------------- Ejercicio 9 ------------------------
 
-from ejercicio9.CarritoConDescuento import 
+#from ejercicio9.CarritoConDescuento import Producto, Carrito
+
+# Creamos productos
+#computador = Producto("Computador Gamer", 1500)
+#teclado = Producto("Teclado Mecánico", 80)
+#mouse = Producto("Mouse Inalámbrico", 35)
+
+# Creamos un carrito
+#Mi_carrito = Carrito()
+
+# Agregar productos al carrito
+#Mi_carrito.agregar_producto(computador, 1)
+#Mi_carrito.agregar_producto(teclado, 2)
+#Mi_carrito.agregar_producto(mouse, 1)
+
+# Calcular y mostrar el total sin descuento
+#total = Mi_carrito.calcular_total()
+#print(f"Total del carrito sin descuento: $'{total}'.")
+
+# Aplicamos un descuento del 10%
+#total_a_pagar = Mi_carrito.aplicar_descuento(10)
+#print(f"Total del carrito con 10% de descuento: $'{total_a_pagar:.2f}'.")
+
+#-------------------------------- Ejercicio 10----------------------------
+
+#from ejercicio10.EstudianteyNota import Estudiante, Nota
+
+# CreamosEstudiantes
+#estudiante1 = Estudiante("Dayane Palma")
+#estudiante2 = Estudiante("Juan Palma")
+
+# Creamos algunas notas del alumno
+#print(f"\n--- Calificaciones obtenidas-----")
+#nota1 = Nota("Programacion", 6.5)
+#nota2 = Nota("Calculo", 5.0)
+#nota3 = Nota("Bases de Datos", 7.0)
+#nota4 = Nota("Programacion", 6.0)
+#nota5 = Nota("Calculo", 5.8)
+#nota6 = Nota("Bases de Datos", 7.0)
+
+# Agregaos las notas al estudiante
+#estudiante1.agregar_nota(nota1)
+#estudiante1.agregar_nota(nota2)
+#estudiante1.agregar_nota(nota3)
+#estudiante2.agregar_nota(nota4)
+#estudiante2.agregar_nota(nota5)
+#estudiante2.agregar_nota(nota6)
+
+# Mostrar todas las notas del alumno
+#estudiante1.mostrar_calificaciones()
+#estudiante2.mostrar_calificaciones()
+
+# Calcular y mostrar el promedio del alumno
+#promedio = estudiante1.calcular_promedio()
+#print(f"\nEl promedio total de '{estudiante1.nombre}' es: '{promedio:.2f}'.")
+#promedio2 = estudiante2.calcular_promedio()
+#print(f"\nEl promedio total de '{estudiante2.nombre}' es: '{promedio2:.2f}'.")
+
+#------------------------------------- Ejercicio 11 -------------------------------
+
+#from ejercicio11.EmpleadoyEmpresa import Empleado, Empresa
+
+# Creamos empresa
+#Mi_empresa = Empresa()
+
+# Crear empleados
+#print(f"\n-----Posibles empleados------")
+#empleado1 = Empleado("Dayane Palma", 1500000)
+#empleado2 = Empleado("Juan Perez", 1800000)
+#empleado3 = Empleado("Camila Gomez", 1200000)
+
+# Contratar a empleados
+#Mi_empresa.contratar_empleado(empleado1)
+#Mi_empresa.contratar_empleado(empleado2)
+#Mi_empresa.contratar_empleado(empleado3)
+
+# Lista de todos los empleados
+#Mi_empresa.listar_empleados()
+
+# Calculamos y mostrar el gasto total
+#gasto_mensual = Mi_empresa.gasto_total_sueldos()
+#print(f"\n💰 El gasto total en sueldos es de: $'{gasto_mensual}'.")
+
+#------------------------------------- Ejercicio 12 ---------------------------------------
+
+from ejercicio13.VeterinariayMascotas import
