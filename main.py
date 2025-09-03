@@ -2,7 +2,7 @@
 print ("_______Ejercicio UNO_______")
 
 from  ejercicio_1.libro_biblioteca import Libro, Biblioteca
-
+ 
 mi_biblioteca = Biblioteca()
 
 libro1 = Libro("Cien años de soledad.", "Gabriel Garcia Marquez.", 5)
@@ -17,16 +17,20 @@ mi_biblioteca.prestar("El corazon delator.")
 
 mi_biblioteca.devolver("Cien años de soledad.")
 
-mi_biblioteca.mostrar()
+print("-------libros disponibles-------")
+
+mi_biblioteca.mostrar() 
+ 
 
 ## ==== desarrollo de ejercicio_2 ==== ##
+
 print ("_______Ejercicio DOS_______")
 
 from ejercicio_2.alumno_curso import alumno, curso
 
-alumno1 = alumno("Samuel Morales")
-alumno2 = alumno("Camilo Candia")
-alumno3 = alumno("Joaquin Navarrete")
+alumno1 = alumno("- Samuel Morales")
+alumno2 = alumno("- Camilo Candia")
+alumno3 = alumno("- Joaquin Navarrete")
 
 curso_basico = curso("Serigrafia")
   
@@ -39,17 +43,33 @@ curso_basico.listar_alumno()
 
 ## ===== desarrollo ejercicio_3 ===== ##
 
-##from ejercicio_3.pedido_item import item, pedido
 
-##mi_pedido = pedido(item1)
-##item1 = item("celular", 100000, 6)
-##item2 = item("laptop", 150000, 4)
-##item3 = item("tablet", 180000, 8)
+print ("_______Ejercicio TRES_______")
 
-##mi_pedido.agregar_item(item1)
-##mi_pedido.agregar_item(item2)
-##mi_pedido.agregar_item(item3)
-
-##mi_pedido.calculo_total()
+from ejercicio_3.pedido_item import Pedido, Item
 
 
+item1 = Item("Papas en tarro", 1900, 3)
+item2 = Item("Ramitas de queso", 1000, 2)
+item3 = Item("Refresco de cola", 1500, 1 )
+
+
+pedido1 = Pedido()
+pedido1.agregaritem(item1)
+pedido1.agregaritem(item2)
+pedido1.agregaritem(item3)
+
+print("Total del pedido:", pedido1.totalpedido())
+
+
+## ===== desarrollo ejercicio_4 ===== ##
+
+s1= Sensor("Temperatura")
+
+s1.registrar(-10)
+s1.registrar(25)
+s1.registrar(30)
+
+s1.promedio()
+s1.maximo()
+s1.minimo()

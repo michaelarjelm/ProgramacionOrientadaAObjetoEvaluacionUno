@@ -9,8 +9,20 @@ class Sensor:
     def registrar(self, valor):
         self.mediciones.append(valor)
 
-    def promedio(self)
-       self.
+    def obtener_promedio(self):
+        if not self.mediciones:
+            return 0
+        return sum(self.mediciones) / len(self.mediciones)
+    def maxima(self):
+        if not self.mediciones:
+            return None
+        return max(self.mediciones)
+    
+    def minima(self):
+        if not self.mediciones:
+            return None
+        return min(self.mediciones)
+   
 
 
     

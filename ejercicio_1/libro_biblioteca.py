@@ -20,24 +20,28 @@ class Biblioteca:
             if libro.titulo == titulo:
                 if libro.copias > 0:
                     libro.copias -= 1
-        print(f"-Te hemos prestado el libro: {libro2.titulo}")
+        print(f"-Te hemos prestado el libro: {libro.titulo}")
         return
-    print("-------------------------------")
+    print("---------------------------------")
                
     def devolver(self, titulo):
         for libro in self.libros:
             if libro.titulo == titulo:
                 libro.copias += 1
-        print(f"-Has devuelto el libro: {libro1.titulo}")
+        print(f"-Has devuelto el libro: {libro.titulo}")
         return 
-        print("-------------------------------")
+   
                 
     def mostrar (self):
         for libro in self.libros:
             print(f"- Titulo del libro: {libro.titulo}")
             print(f"- Autor del libro: {libro.autor}")
             print(f"- Copias disponibles: {libro.copias}")
-            print("------------------------------")
+            print("---------------------------------")
+
+
+
+
 
 mi_biblioteca = Biblioteca()
 
@@ -53,9 +57,6 @@ mi_biblioteca.prestar("El corazon delator.")
 
 mi_biblioteca.devolver("Cien años de soledad.")
 
-mi_biblioteca.mostrar()          
-
-
-
-
+print("-------libros disponibles-------")
+mi_biblioteca.mostrar() 
 
