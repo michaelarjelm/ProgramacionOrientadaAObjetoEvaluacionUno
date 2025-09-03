@@ -35,7 +35,7 @@
 
 
 
-#__ejercicio_2
+#__ejercicio_2:
 
 # from ejercicio2.clases.alumno import Alumno
 # from ejercicio2.clases.curso import Curso
@@ -66,7 +66,7 @@
 
 
 
-#__ejercicio_3
+#__ejercicio_3:
 
 # from ejercicio3.clases.item import Item
 # from ejercicio3.clases.pedido import Pedido
@@ -111,35 +111,90 @@
 
 
 
-#__ejercicio_4
+#__ejercicio_4:
 
 
-from ejercicio4.clases.sensor import Sensor
+# from ejercicio4.clases.sensor import Sensor
 
 
-sensor_vibraciones = Sensor("sensor_vibraciones")
+# sensor_vibraciones = Sensor("sensor_vibraciones")
 
 
-sensor_vibraciones.registrar_valores()
-sensor_vibraciones.registrar_valores()
-sensor_vibraciones.registrar_valores()
-
-
-
-print(sensor_vibraciones.lista_mediciones)
-
-
-sensor_vibraciones.promedio()
+# sensor_vibraciones.registrar_valores()
+# sensor_vibraciones.registrar_valores()
+# sensor_vibraciones.registrar_valores()
 
 
 
+# sensor_vibraciones.mostrar_mediciones()
+
+
+# sensor_vibraciones.promedio()
+
+# sensor_vibraciones.maximo()
+
+# sensor_vibraciones.minimo()
 
 
 
 
 
+#__ejercicio_5:
+
+#Película y Catálogo
+# Crea una clase película con título, género y año. Crea una clase Catalogo que permita agregar
+# películas, filtrar por género, buscar por título y listar todas.
+
+# from ejercicio5.clases.pelicula import Pelicula
+# from ejercicio5.clases.catalogo import Catalogo
+
+# catalogo_peliculas = Catalogo()
 
 
+# pelicula1 = Pelicula("Kill Bill","acción", 2003)
+# pelicula2 = Pelicula("Cinema Paradiso","drama", 1988)
+# pelicula3 = Pelicula("Mulholland drive","thriller",2001)
+# pelicula4 = Pelicula("Goodfellas","drama",1990)
+
+
+
+# catalogo_peliculas.agregar_pelicula(pelicula1)
+# catalogo_peliculas.agregar_pelicula(pelicula2)
+# catalogo_peliculas.agregar_pelicula(pelicula3)
+# catalogo_peliculas.agregar_pelicula(pelicula4)
+
+# catalogo_peliculas.lista_catalogo()
+
+
+# catalogo_peliculas.busqueda_titulo()
+
+
+# catalogo_peliculas.filtro_genero()
+
+
+
+
+
+#__ejercicio_6:
+
+# Usuario y Autenticación simple
+# Crea una clase Usuario con nombre de usuario y contraseña. Crea una clase Auth que permita
+# registrar usuarios y hacer login validando credenciales.
+
+
+#En este caso, el import de la clase Usuario se realiza en el archivo de "autenticación",
+# ya que la clase Auth la requiere.
+
+# from ejercicio6.clases.autenticacion import Auth
+
+
+# auth = Auth()
+
+
+# auth.registrar_usuario()
+
+
+# auth.login()
 
 
 
