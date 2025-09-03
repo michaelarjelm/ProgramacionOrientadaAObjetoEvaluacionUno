@@ -16,7 +16,7 @@ class Pedido:
         
     def agregaritem(self, item):
         self.items.append(item)
-        print(f"acabas de agregar {item.cantidad} de  {item.nombre} a tu carrito, es valor es de {item.subtotal()}")
+        print(f"- Acabas de agregar {item.cantidad} unidades de: {item.nombre} a tu carrito, tu total es: {item.subtotal()}")
 
         
     def totalpedido(self):

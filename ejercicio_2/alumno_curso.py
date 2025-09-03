@@ -18,7 +18,8 @@ class curso:
     def remover(self, alumno):
         if alumno in self.alumnos:
             self.alumnos.remove(alumno)
-            print("___________________________________")
+            
+            print("____________________________________")
             
             print(f"- Se ha removido exitosamente a {alumno.nombre} del curso de {self.nombre}:")
             

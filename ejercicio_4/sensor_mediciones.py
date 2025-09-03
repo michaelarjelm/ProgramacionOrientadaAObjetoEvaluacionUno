@@ -2,26 +2,25 @@
 ##Agrega métodos para registrar valores, obtener promedio, máximo y mínimo.
 
 class Sensor:
-    def __init__(self, sensor):
-        self.sensor = sensor 
-        self.mediciones = []
+    def __init__(self, nombre):
+       self.nombre = nombre
+       self.listaMediciones = []
 
-    def registrar(self, valor):
-        self.mediciones.append(valor)
+    def registrar (self, medicion):
+        self.listaMediciones.append (medicion)
+        print (f"Has registrado un valor de {medicion} en el sensor de: {self.nombre} ")
 
-    def obtener_promedio(self):
-        if not self.mediciones:
-            return 0
-        return sum(self.mediciones) / len(self.mediciones)
-    def maxima(self):
-        if not self.mediciones:
-            return None
-        return max(self.mediciones)
+    def promedio (self):
+        self.promMedicion = sum(self.listaMediciones) / len(self.listaMediciones)    
+        print (f"El promedio es: {self.promMedicion}")    
+
+    def maximo (self):
+       self.maxMedicion = max(self.listaMediciones)
+       print (f"El valor máximo es: {self.maxMedicion}")
     
-    def minima(self):
-        if not self.mediciones:
-            return None
-        return min(self.mediciones)
+    def minimo (self):
+        self.minMedicion = min(self.listaMediciones)
+        print (f" El valor mínimo es : {self.minMedicion}")
    
 
 
