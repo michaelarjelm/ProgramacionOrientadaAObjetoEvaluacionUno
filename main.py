@@ -286,26 +286,53 @@
 # # ~ Calculamos y mostramos el gasto mensual total en sueldos
 # miEmpresa.gastoEnSueldos()
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 12 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio12.BancoYCuentas import Cuenta, Banco
+# #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 12 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# from ejercicio12.BancoYCuentas import Cuenta, Banco
 
-# ~ Creamos un objeto Banco
-miBanco = Banco("Banco Gringotts")
+# # ~ Creamos un objeto Banco
+# miBanco = Banco("Banco Gringotts")
 
-# ~ Creamos los objetos Cuenta
-cuentaUno = Cuenta("Javiera", "19219022", 5000)
-cuentaDos = Cuenta("Diego", "19919703", 3000)
+# # ~ Creamos los objetos Cuenta
+# cuentaUno = Cuenta("Javiera", "19219022", 5000)
+# cuentaDos = Cuenta("Diego", "19919703", 3000)
 
-# ~ Abrimos las cuentas en el banco
-miBanco.abrirCuenta(cuentaUno)
-miBanco.abrirCuenta(cuentaDos)
+# # ~ Abrimos las cuentas en el banco
+# miBanco.abrirCuenta(cuentaUno)
+# miBanco.abrirCuenta(cuentaDos)
 
-# ~ Mostramos las cuentas en el banco
-miBanco.mostrarCuentas()
+# # ~ Mostramos las cuentas en el banco
+# miBanco.mostrarCuentas()
 
-# ~ Depositamos y retiramos dinero
-cuentaUno.depositar(24500)
-cuentaDos.retirar(5000)  # ~ Este retiro debería fallar por fondos insuficientes
-cuentaDos.retirar(2000)  # ~ Este retiro debería ser exitoso
-miBanco.mostrarCuentas()
+# # ~ Depositamos y retiramos dinero
+# cuentaUno.depositar(24500)
+# cuentaDos.retirar(5000)  # ~ Este retiro debería fallar por fondos insuficientes
+# cuentaDos.retirar(2000)  # ~ Este retiro debería ser exitoso
+# miBanco.mostrarCuentas()
+
+# ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 13 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio13.VeterinariaYMascotas import Mascota, Veterinaria
+
+# ~ Creamos un objeto Veterinaria
+miVeterinaria = Veterinaria("Patitas felices")
+# ~ Creamos los objetos Mascota
+mascotaUno = Mascota("Nala", "Perro", 6)
+mascotaDos = Mascota("Lupe", "Perro", 2)
+mascotaTres = Mascota("Pepa", "Perro", 13)
+mascotaCuatro = Mascota("Paloma", "Perro", 7)
+
+# ~ Registramos las mascotas en la veterinaria
+miVeterinaria.registrarMascota(mascotaUno)
+miVeterinaria.registrarMascota(mascotaDos)
+miVeterinaria.registrarMascota(mascotaTres)
+miVeterinaria.registrarMascota(mascotaCuatro)
+
+# ~ Buscamos una mascota por nombre
+miVeterinaria.buscarMascota("Lupe")
+miVeterinaria.buscarMascota("Toby") # ~ Esta mascota no está registrada
+
+# ~ Listamos todas las mascotas registradas
+miVeterinaria.listarMascotas()
+
+# ~ Calculamos y mostramos la edad promedio de las mascotas
+miVeterinaria.edadPromedio()
 
