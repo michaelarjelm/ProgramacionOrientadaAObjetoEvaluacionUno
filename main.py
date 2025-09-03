@@ -314,28 +314,68 @@
 
 
 # hacemos el llamada de la clase estudiante 
-from ejercicio10.clases.Estudiante import Estudiante
+# from ejercicio10.clases.Estudiante import Estudiante
+
+# if __name__ == "__main__":
+#     estudiante = Estudiante("Carlos")
+# # segimos con la amisma dinamica del menú, solicitamos que ingrese la nota, mostrar las notas y salir 
+#     while True:
+#         print("\n Promedio  de Notas ")
+#         print("1. Agregar un nota")
+#         print("2. Mostrar notas y promedio")
+#         print("3. Salir")
+#         op = input("Opción: ")
+# # realizamo el menú de ingreso de asignatura y nota 
+#         if op == "1":
+#             asig = input("Asignatura: ")
+#             nota = float(input("Calificación: "))
+#             estudiante.agregar_nota(asig, nota)
+
+#         elif op == "2":
+#             estudiante.mostrar_notas()
+
+#         elif op == "3":
+#             break
+#         else:
+#             print("Opción no válida")
+
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+# ejercicio 11
+#crear clase Titular y Banco 
+# main.py
+from ejercicio11.clases.Banco import Banco
 
 if __name__ == "__main__":
-    estudiante = Estudiante("Carlos")
-# segimos con la amisma dinamica del menú, solicitamos que ingrese la nota, mostrar las notas y salir 
+    banco = Banco()
+
     while True:
-        print("\n Promedio  de Notas ")
-        print("1. Agregar un nota")
-        print("2. Mostrar notas y promedio")
-        print("3. Salir")
+        print("\nBanco Inacap")
+        print("1. Abrir cuenta")
+        print("2. Mostrar cuentas")
+        print("3. Transferir dinero")
+        print("4. Salir")
         op = input("Opción: ")
-# realizamo el menú de ingreso de asignatura y nota 
+
         if op == "1":
-            asig = input("Asignatura: ")
-            nota = float(input("Calificación: "))
-            estudiante.agregar_nota(asig, nota)
+            nombre = input("Titular: ")
+            saldo = float(input("Saldo inicial: "))
+            banco.abrir_cuenta(nombre, saldo)
 
         elif op == "2":
-            estudiante.mostrar_notas()
+            banco.mostrar()
 
         elif op == "3":
+            o = input("Cuenta origen: ")
+            d = input("Cuenta destino: ")
+            m = float(input("Monto: "))
+            if banco.transferir(o, d, m):
+                print("Transferencia realizada.")
+            else:
+                print("Error en la transferencia.")
+
+        elif op == "4":
             break
         else:
             print("Opción no válida")
-
