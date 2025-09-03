@@ -242,22 +242,47 @@
 # miCarrito.resumenCarrito()
 
 #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio10.EstudianteYNota import Nota, Estudiante    
+# from ejercicio10.EstudianteYNota import Nota, Estudiante    
 
-# ~ Creamos un objeto Estudiante
-miEstudiante = Estudiante("Javiera")
+# # ~ Creamos un objeto Estudiante
+# miEstudiante = Estudiante("Javiera")
 
-# ~ Creamos los objetos Nota
-notaUno = Nota("Lenguaje y Comunicación", 6.5)
-notaDos = Nota("Matemáticas", 4.0)
+# # ~ Creamos los objetos Nota
+# notaUno = Nota("Lenguaje y Comunicación", 6.5)
+# notaDos = Nota("Matemáticas", 4.0)
 
-# ~ Agregamos notas al estudiante
-miEstudiante.agregarNota(notaUno)
-miEstudiante.agregarNota(notaDos)
+# # ~ Agregamos notas al estudiante
+# miEstudiante.agregarNota(notaUno)
+# miEstudiante.agregarNota(notaDos)
 
-# ~ Mostramos las notas del estudiante
-miEstudiante.mostrarNotas()
+# # ~ Mostramos las notas del estudiante
+# miEstudiante.mostrarNotas()
 
-# ~ Calculamos y mostramos el promedio de las notas
-promedioNotas = miEstudiante.promedio()
-print(f"Promedio de notas de {miEstudiante.nombre}: {promedioNotas:.2f}")
+# # ~ Calculamos y mostramos el promedio de las notas
+# promedioNotas = miEstudiante.promedio()
+# print(f"Promedio de notas de {miEstudiante.nombre}: {promedioNotas:.2f}")
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10+1 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio11.EmpleadoYEmpresa import Empleado, Empresa
+
+# ~ Creamos un objeto Empresa
+miEmpresa = Empresa("Dunder Mifflin Paper Company")
+
+# ~ Creamos los objetos Empleado
+empleadoUno = Empleado("Michael Scott", 1200000)
+empleadoDos = Empleado("Pam Beesley", 950000)
+empleadoTres = Empleado("Dwight Schrute", 1000000)
+
+# # ~ Contratamos empleados
+# miEmpresa.contratarEmpleado(empleadoUno)
+# miEmpresa.contratarEmpleado(empleadoDos)
+# miEmpresa.contratarEmpleado(empleadoTres)
+#### SI COMENTO ESTE BLOQUE, ASCIENDO A TODOS A CLIENTES XD
+#*** probar con y sin empleados ***
+
+# ~ Listamos los empleados de la empresa
+miEmpresa.listarEmpleados()
+
+# ~ Calculamos y mostramos el gasto mensual total en sueldos
+miEmpresa.gastoEnSueldos()
+
