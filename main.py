@@ -216,26 +216,48 @@
 # miRestaurante.estadoMesas()
 
 #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 09 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio09.CarritoConDescuento import Producto, Carrito   
-# ~ Creamos un objeto Carrito
-miCarrito = Carrito()
-# ~ Creamos los objetos Producto
-productoUno = Producto("Notebook", 499990)
-productoDos = Producto("Smartphone", 259990)
-productoTres = Producto("Audífonos ANC", 54990)
+# from ejercicio09.CarritoConDescuento import Producto, Carrito   
+# # ~ Creamos un objeto Carrito
+# miCarrito = Carrito()
+# # ~ Creamos los objetos Producto
+# productoUno = Producto("Notebook", 499990)
+# productoDos = Producto("Smartphone", 259990)
+# productoTres = Producto("Audífonos ANC", 54990)
 
-# ~ Agregamos productos al carrito
-miCarrito.agregarProducto(productoUno, 1)
-miCarrito.agregarProducto(productoDos, 2)
-miCarrito.agregarProducto(productoTres, 3)
-miCarrito.agregarProducto(productoDos, 1) # ~ Agregamos más unidades de un producto ya existente
+# # ~ Agregamos productos al carrito
+# miCarrito.agregarProducto(productoUno, 1)
+# miCarrito.agregarProducto(productoDos, 2)
+# miCarrito.agregarProducto(productoTres, 3)
+# miCarrito.agregarProducto(productoDos, 1) # ~ Agregamos más unidades de un producto ya existente
 
-# ~ Calculamos el total sin descuento
-totalSinDescuento = miCarrito.calcularTotal()
-print(f"Total sin descuento: ${totalSinDescuento}")
+# # ~ Calculamos el total sin descuento
+# totalSinDescuento = miCarrito.calcularTotal()
+# print(f"Total sin descuento: ${totalSinDescuento}")
 
-# ~ Calculamos el total con un descuento del 10%
-totalConDescuento = miCarrito.calcularTotal(descuento=10)
-print(f"Total con descuento del 10%: ${totalConDescuento}")
+# # ~ Calculamos el total con un descuento del 10%
+# totalConDescuento = miCarrito.calcularTotal(descuento=10)
+# print(f"Total con descuento del 10%: ${totalConDescuento}")
 
+# # ~ Mostramos el resumen del carrito
+# miCarrito.resumenCarrito()
 
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio10.EstudianteYNota import Nota, Estudiante    
+
+# ~ Creamos un objeto Estudiante
+miEstudiante = Estudiante("Javiera")
+
+# ~ Creamos los objetos Nota
+notaUno = Nota("Lenguaje y Comunicación", 6.5)
+notaDos = Nota("Matemáticas", 4.0)
+
+# ~ Agregamos notas al estudiante
+miEstudiante.agregarNota(notaUno)
+miEstudiante.agregarNota(notaDos)
+
+# ~ Mostramos las notas del estudiante
+miEstudiante.mostrarNotas()
+
+# ~ Calculamos y mostramos el promedio de las notas
+promedioNotas = miEstudiante.promedio()
+print(f"Promedio de notas de {miEstudiante.nombre}: {promedioNotas:.2f}")
