@@ -345,37 +345,59 @@
 # ejercicio 11
 #crear clase Titular y Banco 
 # main.py
-from ejercicio11.clases.Banco import Banco
+# from ejercicio11.clases.Banco import Banco
 
-if __name__ == "__main__":
-    banco = Banco()
+# if __name__ == "__main__":
+#     banco = Banco()
 
-    while True:
-        print("\nBanco Inacap")
-        print("1. Abrir cuenta")
-        print("2. Mostrar cuentas")
-        print("3. Transferir dinero")
-        print("4. Salir")
-        op = input("Opción: ")
+#     while True:
+#         print("\nBanco Inacap")
+#         print("1. Abrir cuenta")
+#         print("2. Mostrar cuentas")
+#         print("3. Transferir dinero")
+#         print("4. Salir")
+#         op = input("Opción: ")
 
-        if op == "1":
-            nombre = input("Titular: ")
-            saldo = float(input("Saldo inicial: "))
-            banco.abrir_cuenta(nombre, saldo)
+#         if op == "1":
+#             nombre = input("Titular: ")
+#             saldo = float(input("Saldo inicial: "))
+#             banco.abrir_cuenta(nombre, saldo)
 
-        elif op == "2":
-            banco.mostrar()
+#         elif op == "2":
+#             banco.mostrar()
 
-        elif op == "3":
-            o = input("Cuenta origen: ")
-            d = input("Cuenta destino: ")
-            m = float(input("Monto: "))
-            if banco.transferir(o, d, m):
-                print("Transferencia realizada.")
-            else:
-                print("Error en la transferencia.")
+#         elif op == "3":
+#             o = input("Cuenta origen: ")
+#             d = input("Cuenta destino: ")
+#             m = float(input("Monto: "))
+#             if banco.transferir(o, d, m):
+#                 print("Transferencia realizada.")
+#             else:
+#                 print("Error en la transferencia.")
 
-        elif op == "4":
-            break
-        else:
-            print("Opción no válida")
+#         elif op == "4":
+#             break
+#         else:
+#             print("Opción no válida")
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+#ejercicio Numero 12 
+
+from ejercicio12.clases.Empleado import Empleado
+from ejercicio12.clases.Empresa import Empresa
+
+empresa = Empresa("Inacap")
+
+    # Contratar empleados
+empresa.contratar(Empleado("Carlos", 800000))
+empresa.contratar(Empleado("Edgar", 950000))
+empresa.contratar(Empleado("Rafael", 720000))
+
+    # Mostrar lista de empleados
+empresa.listar_empleados() # nos muestra la lista de empleados--
+
+    # Mostrar gasto total en sueldos--
+print(f"Gasto total en sueldos: ${empresa.gasto_total():,.0f}")
