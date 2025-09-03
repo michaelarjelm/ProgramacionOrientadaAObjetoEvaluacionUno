@@ -1,4 +1,4 @@
- # #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 01 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+#  #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 01 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
 # from ejercicio01.LibroYBiblioteca2 import Libro, Biblioteca
 
 # # ~ Creamos un objeto Biblioteca
@@ -215,7 +215,7 @@
 # # ~ Mostramos el estado final de las mesas
 # miRestaurante.estadoMesas()
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 09 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 09 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
 # from ejercicio09.CarritoConDescuento import Producto, Carrito   
 # # ~ Creamos un objeto Carrito
 # miCarrito = Carrito()
@@ -241,7 +241,7 @@
 # # ~ Mostramos el resumen del carrito
 # miCarrito.resumenCarrito()
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
 # from ejercicio10.EstudianteYNota import Nota, Estudiante    
 
 # # ~ Creamos un objeto Estudiante
@@ -262,27 +262,50 @@
 # promedioNotas = miEstudiante.promedio()
 # print(f"Promedio de notas de {miEstudiante.nombre}: {promedioNotas:.2f}")
 
-#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10+1 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio11.EmpleadoYEmpresa import Empleado, Empresa
+# #⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 10+1 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# from ejercicio11.EmpleadoYEmpresa import Empleado, Empresa
 
-# ~ Creamos un objeto Empresa
-miEmpresa = Empresa("Dunder Mifflin Paper Company")
+# # ~ Creamos un objeto Empresa
+# miEmpresa = Empresa("Dunder Mifflin Paper Company")
 
-# ~ Creamos los objetos Empleado
-empleadoUno = Empleado("Michael Scott", 1200000)
-empleadoDos = Empleado("Pam Beesley", 950000)
-empleadoTres = Empleado("Dwight Schrute", 1000000)
+# # ~ Creamos los objetos Empleado
+# empleadoUno = Empleado("Michael Scott", 1200000)
+# empleadoDos = Empleado("Pam Beesley", 950000)
+# empleadoTres = Empleado("Dwight Schrute", 1000000)
 
 # # ~ Contratamos empleados
 # miEmpresa.contratarEmpleado(empleadoUno)
 # miEmpresa.contratarEmpleado(empleadoDos)
 # miEmpresa.contratarEmpleado(empleadoTres)
-#### SI COMENTO ESTE BLOQUE, ASCIENDO A TODOS A CLIENTES XD
-#*** probar con y sin empleados ***
+# ### SI COMENTO ESTE BLOQUE, ASCIENDO A TODOS A CLIENTES XD
+# ### *** probar con y sin empleados ***
 
-# ~ Listamos los empleados de la empresa
-miEmpresa.listarEmpleados()
+# # ~ Listamos los empleados de la empresa
+# miEmpresa.listarEmpleados()
 
-# ~ Calculamos y mostramos el gasto mensual total en sueldos
-miEmpresa.gastoEnSueldos()
+# # ~ Calculamos y mostramos el gasto mensual total en sueldos
+# miEmpresa.gastoEnSueldos()
+
+#⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 12 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio12.BancoYCuentas import Cuenta, Banco
+
+# ~ Creamos un objeto Banco
+miBanco = Banco("Banco Gringotts")
+
+# ~ Creamos los objetos Cuenta
+cuentaUno = Cuenta("Javiera", "19219022", 5000)
+cuentaDos = Cuenta("Diego", "19919703", 3000)
+
+# ~ Abrimos las cuentas en el banco
+miBanco.abrirCuenta(cuentaUno)
+miBanco.abrirCuenta(cuentaDos)
+
+# ~ Mostramos las cuentas en el banco
+miBanco.mostrarCuentas()
+
+# ~ Depositamos y retiramos dinero
+cuentaUno.depositar(24500)
+cuentaDos.retirar(5000)  # ~ Este retiro debería fallar por fondos insuficientes
+cuentaDos.retirar(2000)  # ~ Este retiro debería ser exitoso
+miBanco.mostrarCuentas()
 
