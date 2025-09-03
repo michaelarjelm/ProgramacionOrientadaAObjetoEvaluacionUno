@@ -7,18 +7,18 @@ from Ejercicio3.clases.pedido import Pedido
 from Ejercicio4.clases.sensor import Sensor
 from Ejercicio5.clases.catalogo import Catalogo
 from Ejercicio5.clases.pelicula import Pelicula
-# from Ejercicio6.clases.auth import
-# from Ejercicio6.clases.usuario import
+from Ejercicio6.clases.auth import Auth
+from Ejercicio6.clases.usuario import Usuario
 from Ejercicio7.clases.agenda import Agenda
 from Ejercicio7.clases.contacto import Contacto
-# from Ejercicio8.clases.mesa import
-# from Ejercicio8.clases.restaurante import
-# from Ejercicio9.clases.carrito import
-# from Ejercicio9.clases.producto import
-# from Ejercicio10.clases.estudiante import
-# from Ejercicio10.clases.nota import
-# from Ejercicio11.clases.empleado import
-# from Ejercicio11.clases.empresa import
+from Ejercicio8.clases.mesa import Mesa
+from Ejercicio8.clases.restaurante import Restaurante
+from Ejercicio9.clases.carrito import Carrito
+from Ejercicio9.clases.producto import Producto 
+from Ejercicio10.clases.estudiante import Estudiante
+from Ejercicio10.clases.nota import Nota
+from Ejercicio11.clases.empleado import Empleado
+from Ejercicio11.clases.empresa import Empresa
 # from Ejercicio12.clases.banco import
 # from Ejercicio12.clases.cuenta import
 # from Ejercicio13.clases.mascota import
@@ -26,7 +26,9 @@ from Ejercicio7.clases.contacto import Contacto
 # from Ejercicio14.clases.examen import
 # from Ejercicio14.clases.pregunta import
 
-print("\n\t==== Ejercicio 1: Desarrollo ====")
+
+
+print("\n\t==== Ejercicio 1: Libro y Biblioteca ====")
 
 libro1 = Libro("Nubes de talco", "Amanda Baeza", 5)
 libro2 = Libro("Peklo", "Sukinapan", 7)
@@ -41,7 +43,7 @@ bibliobus.prestamo(libro1, 3)
 bibliobus.devolucion(libro1, 2)
 bibliobus.listar_libros()
 
-print("\n\t==== Ejercicio 2: Desarrollo ====")
+print("\n\t==== Ejercicio 2: Alumno y Curso ====")
 
 alumno1 = Alumno("Alondra Gonzalez")
 alumno2 = Alumno("Rovin Gatica")
@@ -57,7 +59,7 @@ curso.listar_alumnos()
 curso.remover_alumno(alumno3)
 curso.remover_alumno(alumno1)
 
-print("\n\t==== Ejercicio 3: Desarrollo ====")
+print("\n\t==== Ejercicio 3: Item y Pedido ====")
 
 item1 = Item("lapiz", 1200, 6)
 item2 = Item("libreta", 4600, 8)
@@ -71,7 +73,7 @@ pedido1.agregar_item(item3)
 
 pedido1.calcular_total()
 
-print("\n\t==== Ejercicio 4: Desarrollo ====")
+print("\n\t==== Ejercicio 4: Sensor ====")
 
 km_hora = Sensor("km/h")
 
@@ -84,7 +86,7 @@ print(km_hora.minimo())
 print(km_hora.maximo())
 print(km_hora.promedio())
 
-print("\n\t==== Ejercicio 5: Desarrollo ====")
+print("\n\t==== Ejercicio 5: Pelicula y Catalogo ====")
 
 peli1 = Pelicula("Akira", "ciencia ficcion", 1988)
 peli2 = Pelicula("Robot carnival", "ciencia ficcion", 1987)
@@ -103,9 +105,28 @@ catalogo.filtrar_por_genero(genero)
 catalogo.buscar_por_titulo(peli1)
 catalogo.listar_peliculas()
 
-# print("\n\t==== Ejercicio 6: Desarrollo ====")
+print("\n\t==== Ejercicio 6: Usuario y Auth ====")
 
-print("\n\t==== Ejercicio 7: Desarrollo ====")
+user1 = Usuario('alondra','123qwe')
+user2 = Usuario('rovin','psw000')
+user3 = Usuario('foster','123123')
+user4 = Usuario('marisol','asdfgh')
+
+data = Auth()
+
+data.login(user1,'qwertyu')
+
+data.registrar_usuario(user1)
+data.registrar_usuario(user2)
+data.registrar_usuario(user3)
+data.registrar_usuario(user4)
+
+data.login(user1,'123qwe')
+data.login(user2,'asdasd')
+data.login(user4,'asdfgh')
+
+
+print("\n\t==== Ejercicio 7: Contacto y Agenda ====")
 
 contacto1 = Contacto("Alondra Gonzalez", 66857743, "alondra@correo.cl")
 contacto2 = Contacto("Rovin Gatica", 23564478, "rovin@correo.cl")
@@ -121,16 +142,86 @@ personal.buscar_contacto(contacto2)
 personal.eliminar_contacto(contacto1)
 personal.listar_contactos()
 
-# print("\n\t==== Ejercicio 8: Desarrollo ====")
+print("\n\t==== Ejercicio 8: Mesa y Restaurante ====")
 
-# print("\n\t==== Ejercicio 9: Desarrollo ====")
+mesa1 = Mesa(1,4)
+mesa2 = Mesa(2,8)
+mesa3 = Mesa(3,6)
+mesa4 = Mesa(4,2)
 
-# print("\n\t==== Ejercicio 10: Desarrollo ====")
+restaurante = Restaurante("Donde Pilon")
 
-# print("\n\t==== Ejercicio 11: Desarrollo ====")
+restaurante.agregar_mesa(mesa1)
+restaurante.agregar_mesa(mesa2)
+restaurante.agregar_mesa(mesa3)
+restaurante.agregar_mesa(mesa4)
 
-# print("\n\t==== Ejercicio 12: Desarrollo ====")
+restaurante.reservar_mesa(mesa2,10)
+restaurante.reservar_mesa(mesa2,8)
+restaurante.reservar_mesa(mesa4,1) 
+restaurante.reservar_mesa(mesa2,10)
+restaurante.reservar_mesa(mesa1,3)
 
-# print("\n\t==== Ejercicio 13: Desarrollo ====")
+restaurante.liberar_mesa(mesa2)
+restaurante.mostrar_mesas()
 
-# print("\n\t==== Ejercicio 14: Desarrollo ====")
+print("\n\t==== Ejercicio 9: Carrito y Producto ====")
+
+arroz = Producto('arroz', 1200)
+harina = Producto('harina', 950)
+aceite = Producto('aceite', 1700)
+leche = Producto('leche', 990)
+fideos = Producto('fideos', 850)
+
+super = Carrito()
+super.agregar_producto(arroz, 4)
+super.agregar_producto(harina, 3)
+super.agregar_producto(aceite, 3)
+super.agregar_producto(leche, 12)
+super.agregar_producto(fideos, 5)
+
+super.calcular_total()
+
+super.aplicar_descuento(15, aceite)
+super.aplicar_descuento(20, leche)
+super. calcular_total()
+
+print("\n\t==== Ejercicio 10: Estudiante y Nota ====\n")
+
+nota1 = Nota("matematica", 5.5)
+nota2 = Nota("lenguaje",4.3)
+nota3 = Nota("historia", 3.9)
+nota4 = Nota("quimica", 6.8)
+
+estudiante = Estudiante("alondra")
+
+estudiante.agregar_nota(nota1)
+estudiante.agregar_nota(nota2)
+estudiante.agregar_nota(nota3)
+estudiante.agregar_nota(nota4)
+
+estudiante.mostrar_calificaciones()
+estudiante.calcular_promedio()
+
+print("\n\t==== Ejercicio 11: Empleado y Empresa ====\n")
+
+empleado1 = Empleado("alondra", 222000)
+empleado2 = Empleado("marisol", 100500)
+empleado3 = Empleado("rovin", 500500)
+empleado4 = Empleado("foster", 300500)
+
+empresa = Empresa("Minimarket")
+
+empresa.contratar(empleado1)
+empresa.contratar(empleado2)
+empresa.contratar(empleado3)
+empresa.contratar(empleado4)
+
+empresa.listar_empleados()
+empresa.calcular_sueldos()
+
+# print("\n\t==== Ejercicio 12: Cuenta y Banco ====")
+
+# print("\n\t==== Ejercicio 13: Mascota y Veterinaria ====")
+
+# print("\n\t==== Ejercicio 14: Examen y Pregunta ====")
