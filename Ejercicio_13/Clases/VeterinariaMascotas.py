@@ -14,12 +14,12 @@ class Veterinaria:
         self.listaMascotas[mascota.nombre] = mascota
         print (f"Has registrado a la mascota: {mascota.nombre}, especie: {mascota.especie}, edad: {mascota.edad} años")
    
-    def buscar (self, nombre):
+    def buscar(self, nombre):
         buscador = self.listaMascotas.get(nombre.lower())
-        if buscador == nombre:
-            print (f" Se ha encontrado la mascota: {nombre}, especie: {buscar.especie}, edad: {buscar.edad} años")
-        else: 
-            print| (f"No se encontró la mascota con el nombre: {nombre}")
+        if buscador:
+            print(f"Se encontró la mascota: {buscador.nombre}, especie: {buscador.especie}, edad: {buscador.edad} años.")
+        else:
+            print(f"No se encontró la mascota con el nombre: {nombre}.")
     
     def listar (self):
         print ("Listado de todas las mascotas registradas:")

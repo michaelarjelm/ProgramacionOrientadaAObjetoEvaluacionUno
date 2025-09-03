@@ -272,3 +272,19 @@ listaVetrinaria.listar()
 
 edadPromedio = listaVetrinaria.edadPromedio()
 print (f"La edad promedio de las mascotas es de: {edadPromedio} años")
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 14: eXAMEN Y PREGUNTAS
+
+from Ejercicio_14.Clases.ExamenPreguntas import Pregunta, Examen
+
+pregunta1 = Pregunta("¿Cuál es primer día de la seman?", "Lunes")
+pregunta2 = Pregunta("¿Qué le pasa a Lupita?", "No sé")
+
+examen = Examen()
+
+examen.agregar(pregunta1)
+examen.agregar(pregunta2)   
+
+examen.listar()
+examen.contarPreguntas()
