@@ -309,30 +309,53 @@
 # cuentaDos.retirar(2000)  # ~ Este retiro debería ser exitoso
 # miBanco.mostrarCuentas()
 
-# ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 13 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
-from ejercicio13.VeterinariaYMascotas import Mascota, Veterinaria
+# # ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 13 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+# from ejercicio13.VeterinariaYMascotas import Mascota, Veterinaria
 
-# ~ Creamos un objeto Veterinaria
-miVeterinaria = Veterinaria("Patitas felices")
-# ~ Creamos los objetos Mascota
-mascotaUno = Mascota("Nala", "Perro", 6)
-mascotaDos = Mascota("Lupe", "Perro", 2)
-mascotaTres = Mascota("Pepa", "Perro", 13)
-mascotaCuatro = Mascota("Paloma", "Perro", 7)
+# # ~ Creamos un objeto Veterinaria
+# miVeterinaria = Veterinaria("Patitas felices")
+# # ~ Creamos los objetos Mascota
+# mascotaUno = Mascota("Nala", "Perro", 6)
+# mascotaDos = Mascota("Lupe", "Perro", 2)
+# mascotaTres = Mascota("Pepa", "Perro", 13)
+# mascotaCuatro = Mascota("Paloma", "Perro", 7)
 
-# ~ Registramos las mascotas en la veterinaria
-miVeterinaria.registrarMascota(mascotaUno)
-miVeterinaria.registrarMascota(mascotaDos)
-miVeterinaria.registrarMascota(mascotaTres)
-miVeterinaria.registrarMascota(mascotaCuatro)
+# # ~ Registramos las mascotas en la veterinaria
+# miVeterinaria.registrarMascota(mascotaUno)
+# miVeterinaria.registrarMascota(mascotaDos)
+# miVeterinaria.registrarMascota(mascotaTres)
+# miVeterinaria.registrarMascota(mascotaCuatro)
 
-# ~ Buscamos una mascota por nombre
-miVeterinaria.buscarMascota("Lupe")
-miVeterinaria.buscarMascota("Toby") # ~ Esta mascota no está registrada
+# # ~ Buscamos una mascota por nombre
+# miVeterinaria.buscarMascota("Lupe")
+# miVeterinaria.buscarMascota("Toby") # ~ Esta mascota no está registrada
 
-# ~ Listamos todas las mascotas registradas
-miVeterinaria.listarMascotas()
+# # ~ Listamos todas las mascotas registradas
+# miVeterinaria.listarMascotas()
 
-# ~ Calculamos y mostramos la edad promedio de las mascotas
-miVeterinaria.edadPromedio()
+# # ~ Calculamos y mostramos la edad promedio de las mascotas
+# miVeterinaria.edadPromedio()
+
+# ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ~ EJERCICIO 14 ~ ˚.⋆⊹ ࣪ ˖✮｡°⋆˚˖☆⋆˚
+from ejercicio14.ExamenYPreguntas import Pregunta, Examen
+
+# ~ Creamos un objeto Examen
+miExamen = Examen("Examen POO")
+
+# ~ Creamos los objetos Pregunta
+preguntaUno = Pregunta("¿Qué es la Programación Orientada a Objetos?", "Un paradigma de programación basado en objetos.")
+preguntaDos = Pregunta("¿Qué es una clase en POO?", "Una plantilla para crear objetos.")
+preguntaTres = Pregunta("¿Qué es un objeto en POO?", "Una instancia de una clase.")
+
+# ~ Agregamos las preguntas al examen
+miExamen.agregarPregunta(preguntaUno)
+miExamen.agregarPregunta(preguntaDos)
+miExamen.agregarPregunta(preguntaTres)
+
+# ~ Listamos las preguntas del examen
+miExamen.listarPreguntas()
+
+# ~ Contamos y mostramos el total de preguntas en el examen
+miExamen.totalPreguntas()
+
 
