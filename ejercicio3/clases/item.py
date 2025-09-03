@@ -1,12 +1,19 @@
-# clases/Item.py
-class Item:
-    def __init__(self, nombre: str, precio: float, cantidad: int):
-        self.nombre = nombre
-        self.precio = precio
-        self.cantidad = cantidad
+#creamos la clase Item, con mayuzcula para no tener problemas con el import.
+# clases/Pedido.py
+from ejercicio3.clases.item import Item
 
-    def subtotal(self) -> float:
-        return self.precio * self.cantidad
+class Pedido:
+    def __init__(self):
+        self.items = []
 
-    def __str__(self) -> str:
-        return f"{self.nombre} x {self.cantidad} = ${self.subtotal():.2f}"
+    def agregar_item(self, item: Item):
+        self.items.append(item)
+
+    def calcular_total(self) -> float:
+        return sum(item.subtotal() for item in self.items)  #calcula el total de la compra 
+
+    def mostrar_detalle(self):
+        print("Tus productos son:\n") #esto mostrara los items que se tienen 
+        for item in self.items:
+            print(item)
+        print(f"\nEl total de tu compra es:  = ${self.calcular_total():.2f} Gracias por preferirnos ")
