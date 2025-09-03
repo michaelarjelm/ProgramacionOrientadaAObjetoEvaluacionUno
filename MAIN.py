@@ -208,3 +208,42 @@ listaNotas.agregarNota(nota3)
 listaNotas.promedio()
 
 listaNotas.mostrarNotas()
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 11 : EMPLEADO Y EMPRESA
+
+from Ejercicio_11.Clases.EmpleadoEmpresa import Empleado, Empresa
+
+empleado1 = Empleado("Andrea", 1200000)
+empleado2 = Empleado("Javiera", 1500000)
+empleado3 = Empleado("Dayane", 1000000)
+
+empresa = Empresa()
+
+empresa.contratar(empleado1)
+empresa.contratar(empleado2)
+empresa.contratar(empleado3)
+
+empresa.listar()
+
+empresa.gastoTotaSueldos()
+
+#----------------------------------------------------------------------------------------------#
+#EJERCICIO 12: BANCO Y CUENTAS
+
+from Ejercicio_12.Clases.BancoCuentas import Cuenta, Banco
+
+cuenta1 = Cuenta("Andrea", 500000)
+cuenta2 = Cuenta("Javiera", 1000000)
+
+banco = Banco()
+banco.abrirCuenta(cuenta1)
+banco.abrirCuenta(cuenta2)
+
+banco.buscarCuenta("Andrea")
+banco.buscarCuenta("Dayane")
+
+banco.transferir("Andrea", "Javiera", 200000)
+banco.transferir("Andrea", "Javiera", 500000)
+
+
