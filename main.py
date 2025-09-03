@@ -240,34 +240,73 @@
 #Crear Clase Mesa Y Restaurante 
 
 # creamos el from import del restaurante 
-from ejercicio8.clases.Restaurante import Restaurante
+# from ejercicio8.clases.Restaurante import Restaurante
+
+# if __name__ == "__main__":
+#     restaurante = Restaurante()
+# # repetimos el mismo menu de los otros ejercicios, misma dinamica, del while true para que se mantenga el menú. 
+#     while True:
+#         print("\n--- Restaurante ---")
+#         print("1. Agregar mesa")
+#         print("2. Reservar mesa")
+#         print("3. Liberar mesa")
+#         print("4. Mostrar mesas")
+#         print("5. Salir")
+#         op = input("Opción: ")
+
+#         if op == "1":
+#             n = int(input("Número de mesa: "))
+#             c = int(input("Capacidad: "))
+#             restaurante.agregar_mesa(n, c)
+#         elif op == "2":
+#             n = int(input("Numero de mesa que desea reservar: "))
+#             print("Reservada" if restaurante.reservar(n) else "No disponible")
+#         elif op == "3":
+#             n = int(input("Mesa a liberar: "))
+#             print("Liberada" if restaurante.liberar(n) else "No se pudo liberar")
+#         elif op == "4":
+#             restaurante.mostrar()
+#         elif op == "5":
+#             break
+#         else:
+#             print("Opción inválida")
+
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--------------------->>>>>>>>>>>>>>>>>>>>>>>>
+
+# ejercicio Numero 9 
+# crear clase Producto y carrito de compras 
+
+# en esta ocacion llamamos a las dos clases Producto y carrito 
+from ejercicio9.clases.Producto import Producto
+from ejercicio9.clases.Carrito import Carrito
 
 if __name__ == "__main__":
-    restaurante = Restaurante()
-# repetimos el mismo menu de los otros ejercicios, misma dinamica, del while true para que se mantenga el menú. 
+    carrito = Carrito()
+# igual que lo anterior una vez mas el while y true para mantener el meú aboerto.
     while True:
-        print("\n--- Restaurante ---")
-        print("1. Agregar mesa")
-        print("2. Reservar mesa")
-        print("3. Liberar mesa")
-        print("4. Mostrar mesas")
-        print("5. Salir")
+        print("\nTu Carrito de Compras...")
+        print("1. Agregar producto")
+        print("2. Mostrar carrito")
+        print("3. Calcular total con descuento")
+        print("4. Salir")
         op = input("Opción: ")
 
         if op == "1":
-            n = int(input("Número de mesa: "))
-            c = int(input("Capacidad: "))
-            restaurante.agregar_mesa(n, c)
+            nombre = input("Nombre del producto: ")
+            precio = float(input("Precio: "))
+            cantidad = int(input("Cantidad: "))
+            prod = Producto(nombre, precio)
+            carrito.agregar(prod, cantidad)
+
         elif op == "2":
-            n = int(input("Numero de mesa que desea reservar: "))
-            print("Reservada" if restaurante.reservar(n) else "No disponible")
+            carrito.mostrar()
+
         elif op == "3":
-            n = int(input("Mesa a liberar: "))
-            print("Liberada" if restaurante.liberar(n) else "No se pudo liberar")
+            d = float(input("Porcentaje de descuento: "))
+            print("Total con descuento:", carrito.total_con_descuento(d))
+
         elif op == "4":
-            restaurante.mostrar()
-        elif op == "5":
             break
         else:
-            print("Opción inválida")
-
+            print("Opción no válida")
