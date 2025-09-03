@@ -278,35 +278,64 @@
 # crear clase Producto y carrito de compras 
 
 # en esta ocacion llamamos a las dos clases Producto y carrito 
-from ejercicio9.clases.Producto import Producto
-from ejercicio9.clases.Carrito import Carrito
+# from ejercicio9.clases.Producto import Producto
+# from ejercicio9.clases.Carrito import Carrito
+
+# if __name__ == "__main__":
+#     carrito = Carrito()
+# # igual que lo anterior una vez mas el while y true para mantener el meú abirrto.
+#     while True:
+#         print("\nTu Carrito de Compras...")
+#         print("1. Agregar producto")
+#         print("2. Mostrar carrito")
+#         print("3. Calcular total con descuento")
+#         print("4. Salir")
+#         op = input("Opción: ")
+# # a qui se despliega el menú para agregar un producto, nombre, precio, cantidad 
+#         if op == "1":
+#             nombre = input("Nombre del producto: ")
+#             precio = float(input("Precio: "))
+#             cantidad = int(input("Cantidad: "))
+#             prod = Producto(nombre, precio)
+#             carrito.agregar(prod, cantidad)
+# # muestra las cosas ya tiene el carrito agragado 
+#         elif op == "2":
+#             carrito.mostrar()
+# # calcula el total de descuento 
+#         elif op == "3":
+#             d = float(input("Porcentaje de descuento: "))
+#             print("Total con descuento:", carrito.total_con_descuento(d))
+
+#         elif op == "4":   # la opcion 4 cumple con la condicion por lo tanto te saca del menú 
+#             break
+#         else:
+#             print("Opción no válida")
+
+
+
+# hacemos el llamada de la clase estudiante 
+from ejercicio10.clases.Estudiante import Estudiante
 
 if __name__ == "__main__":
-    carrito = Carrito()
-# igual que lo anterior una vez mas el while y true para mantener el meú aboerto.
+    estudiante = Estudiante("Carlos")
+# segimos con la amisma dinamica del menú, solicitamos que ingrese la nota, mostrar las notas y salir 
     while True:
-        print("\nTu Carrito de Compras...")
-        print("1. Agregar producto")
-        print("2. Mostrar carrito")
-        print("3. Calcular total con descuento")
-        print("4. Salir")
+        print("\n Promedio  de Notas ")
+        print("1. Agregar un nota")
+        print("2. Mostrar notas y promedio")
+        print("3. Salir")
         op = input("Opción: ")
-
+# realizamo el menú de ingreso de asignatura y nota 
         if op == "1":
-            nombre = input("Nombre del producto: ")
-            precio = float(input("Precio: "))
-            cantidad = int(input("Cantidad: "))
-            prod = Producto(nombre, precio)
-            carrito.agregar(prod, cantidad)
+            asig = input("Asignatura: ")
+            nota = float(input("Calificación: "))
+            estudiante.agregar_nota(asig, nota)
 
         elif op == "2":
-            carrito.mostrar()
+            estudiante.mostrar_notas()
 
         elif op == "3":
-            d = float(input("Porcentaje de descuento: "))
-            print("Total con descuento:", carrito.total_con_descuento(d))
-
-        elif op == "4":
             break
         else:
             print("Opción no válida")
+
