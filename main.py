@@ -311,8 +311,75 @@
 
 # Calculamos y mostrar el gasto total
 #gasto_mensual = Mi_empresa.gasto_total_sueldos()
-#print(f"\n💰 El gasto total en sueldos es de: $'{gasto_mensual}'.")
+#print(f"\n El gasto total en sueldos es de: $'{gasto_mensual}'.")
 
 #------------------------------------- Ejercicio 12 ---------------------------------------
 
-from ejercicio13.VeterinariayMascotas import
+#from ejercicio12.BancoyCuentas import Cuenta, Banco
+
+# #Creamos las cuentas
+
+# Cuenta1 = Cuenta('Javiera Lausseube',820000)
+# Cuenta2 = Cuenta('Andrea Diaz', 610000)
+# Cuenta3 = Cuenta('Emilia Valenzuela', 500000)
+
+# #Creamos nuestro banco
+# Mi_banco = Banco()
+
+# #Creamos las cuentas
+# Mi_banco.abrir_cuenta(Cuenta1)
+# Mi_banco.abrir_cuenta(Cuenta3)
+# Mi_banco.abrir_cuenta(Cuenta2)
+
+# #Mostramos lo disponible en las cuentas
+# Mi_banco.mostrar_estado_cuentas()
+
+# #Hacemos una tranferencia
+# Mi_banco.transferir_dinero(Cuenta2, Cuenta3, 80000)
+
+#  Estado de las cuentas
+# Mi_banco.estado_cuentas()
+
+#------------------------------- Ejercicio 13 --------------------------
+
+# from ejercicio13.VeterinariayMascotas import Mascota, Veterinaria
+
+# #Creamos mascotas
+# Mascota1 = Mascota('Emma','canina', 8)
+# Mascota2 = Mascota('Gariro', 'felino', 4)
+# Mascota3 = Mascota('Rusia', 'Erizo', 1)
+
+# #Creamos la veterinaria
+# Mi_veterinaria = Veterinaria()
+
+# Mi_veterinaria.registrar_mascota(Mascota1)
+# Mi_veterinaria.registrar_mascota(Mascota2)
+# Mi_veterinaria.registrar_mascota(Mascota3)
+
+# #Listamos las mascotas
+# Mi_veterinaria.listar_mascotas()
+
+
+# mascota_encontrada = Mi_veterinaria.buscar_mascota('Aura')
+# if mascota_encontrada:
+#         print(f"\nMascota encontrada: '{mascota_encontrada.nombre}', '{mascota_encontrada.especie}', '{mascota_encontrada.edad}' años.")
+# else:
+#         print("Mascota no encontrada.")
+
+#---------------------------------- Ejercicio 14 -----------------------------------
+
+# from ejercicio14.ExamenyPreguntas import Pregunta, Examen
+
+# #Creamos las preguntas
+# Pregunta1 = Pregunta('¿ cual es el resultado de cualquier numero dividido por 0?', 0)
+# Pregunta2 = Pregunta('¿Cual es el resultado de 2+2', 4)
+
+# Mi_examen = Examen()
+
+# Mi_examen.anadir_pregunta(Pregunta1)
+# Mi_examen.anadir_pregunta(Pregunta2)
+
+# Mi_examen.listar_preguntas()
+
+# total_preguntas = Mi_examen.contar_preguntas()
+# print(f"\nEl examen tiene un total de '{total_preguntas}' preguntas.")
