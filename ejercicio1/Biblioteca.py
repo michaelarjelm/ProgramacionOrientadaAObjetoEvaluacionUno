@@ -1,4 +1,3 @@
-# ejercicio1/Biblioteca.py
 class Biblioteca:
     def __init__(self):
         self.libros = []
