@@ -216,3 +216,52 @@ print("\nGasto total en sueldos:", empresa_pc.gasto_total_sueldos())
 
 ## ===== desarrollo ejercicio_12===== ##
 print ("_______Ejercicio DOCE_______")
+from ejercicio_12.banco_cuenta import Banco, Cuenta
+banco = Banco()
+banco.abrir_cuenta(Cuenta("Samuel", 10000))
+banco.abrir_cuenta(Cuenta("jose", 20000))
+
+print("Cuentas actuales:")
+banco.mostrar_cuentas()
+
+banco.transferir("Samuel", "Maria", 500)
+
+
+print("Cuentas después de la transferencia:")
+banco.mostrar_cuentas()
+## ===== desarrollo ejercicio_13===== ##
+print ("_______Ejercicio TRECE_______")
+from ejercicio_13.veterinaria_mascotas import Veterinaria, Mascota
+
+veterinaria = Veterinaria()
+
+veterinaria.registrar_mascota(Mascota("Firulais", "Perro", 5))
+veterinaria.registrar_mascota(Mascota("Michi", "Gato", 3))
+veterinaria.registrar_mascota(Mascota("Nemo", "Pez", 1))
+
+print("\nBuscando Michi:")
+veterinaria.buscar_mascota("Michi")
+
+print("\nLista de mascotas:")
+veterinaria.listar_mascotas()
+
+print("Edad promedio de las mascotas:", veterinaria.edad_promedio())
+
+## ===== desarrollo ejercicio_14===== ##
+print ("_______Ejercicio CATORCE_______")
+
+from ejercicio_14.examen_pregunta import Examen, Pregunta
+
+examen = Examen()
+
+
+examen.agregar_pregunta(Pregunta("¿Capital de Francia?", "París"))
+examen.agregar_pregunta(Pregunta("¿5 + 7?", "12"))
+examen.agregar_pregunta(Pregunta("¿Color del cielo?", "Azul"))
+
+print("Preguntas del examen:")
+examen.listar_preguntas()
+
+print("\nTotal de preguntas:", examen.total_preguntas())
+
+##____________________________________________________________________
