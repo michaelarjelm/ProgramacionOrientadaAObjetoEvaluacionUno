@@ -1,0 +1,28 @@
+from pelicula import Pelicula
+
+class Catalogo:
+    def __init__(self):
+        self.peliculas = []
+
+    def agregar_pelicula(self, titulo, genero, año):
+        nueva_pelicula = Pelicula(titulo, genero, año)
+        self.peliculas.append(nueva_pelicula)
+        print(f"Película '{titulo}' agregada al catálogo.")
+
+    def filtrar_por_genero(self, genero):
+        filtradas = [p for p in self.peliculas if p.genero.lower() == genero.lower()]
+        return filtradas
+
+    def buscar_por_titulo(self, titulo):
+        for pelicula in self.peliculas:
+            if pelicula.titulo.lower() == titulo.lower():
+                return pelicula
+        return None
+
+    def listar_peliculas(self):
+        if not self.peliculas:
+            print("No hay películas en el catálogo.")
+            return
+        print("Películas en el catálogo:")
+        for pelicula in self.peliculas:
+            print(pelicula)
