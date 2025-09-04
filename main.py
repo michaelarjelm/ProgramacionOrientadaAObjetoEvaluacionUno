@@ -193,34 +193,77 @@
 #     print()
 
 #--------------Ejecicio 6----------------
-from ejercicio6.clases.auth import Auth
-from ejercicio6.clases.usuario import Usuario
+# from ejercicio6.clases.auth import Auth
+# from ejercicio6.clases.usuario import Usuario
 
-if __name__ == "__main__":
-    print("----------------------------------------------------------------------")
-    print("Bienvenidos al Sistema de Autenticación")
-    print("----------------------------------------------------------------------")
-    print()
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos al Sistema de Autenticación")
+#     print("----------------------------------------------------------------------")
+#     print()
 
-    auth_system = Auth()
+#     auth_system = Auth()
 
-    auth_system.registrar("ruth", "password123")
-    auth_system.registrar("alexander", "securepass")
-    auth_system.registrar("nancy", "mypassword")
-    print()
+#     auth_system.registrar("ruth", "password123")
+#     auth_system.registrar("alexander", "securepass")
+#     auth_system.registrar("nancy", "mypassword")
+#     print()
 
-    auth_system.login("ruth", "password123")  
-    print()
+#     auth_system.login("ruth", "password123")  
+#     print()
 
-    print("Intento de login con credenciales incorrectas:")
-    auth_system.login("alexander", "wrongpass")  
-    print()
-    
-    auth_system.login("nancy", "mypassword")  
-    print()
+#     print("Intento de login con credenciales incorrectas:")
+#     auth_system.login("alexander", "wrongpass")  
+#     print()
+
+#     auth_system.login("nancy", "mypassword")  
+#     print()
 
  
 #--------------Ejecicio 7----------------
+from ejercicio7.clases.contacto import Contacto
+from ejercicio7.clases.agenda import Agenda     
+if __name__ == "__main__":
+    print("----------------------------------------------------------------------")
+    print("Bienvenidos a la Agenda de Contactos")
+    print("----------------------------------------------------------------------")
+    print()
+
+    agenda = Agenda()
+    contacto1 = Contacto("Ruth Diaz", "123456789", "rdiazmarchant@gmial.com")
+    contacto2 = Contacto("Alexander Murillo", "191919191", "Amurillod@gmial.com")
+
+    agenda.agregar_contacto(contacto1)
+    agenda.agregar_contacto(contacto2)  
+    print()
+
+    agenda.listar_contactos()
+    print()
+
+    nombre_buscar = "Ruth Diaz"
+    contacto_encontrado = agenda.buscar_contacto(nombre_buscar)
+    if contacto_encontrado:
+        print(f"Contacto encontrado: {contacto_encontrado}")    
+    print()
+
+    agenda.eliminar_contacto("Alexander Murillo")
+    print()
+    
+    #probar contacto no registrado
+    agenda.eliminar_contacto("Nancy Marchant")
+    print()
+
+    agenda.listar_contactos()
+    print()
+#--------------Ejecicio 8----------------
+
+
+
+                         
+
+
+
+
 # Ejercicio 7 — Agenda y Contacto 
 # Crea una clase Contacto con nombre, teléfono y correo. Crea una clase Agenda que permita 
 # agregar, buscar, eliminar y listar contactos.
