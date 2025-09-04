@@ -257,50 +257,108 @@
 #     print()
 #--------------Ejecicio 8----------------
 
-from ejercicio8.clases.mesa import Mesa
-from ejercicio8.clases.restaurante import Restaurante
-if __name__ == "__main__":
-    print("----------------------------------------------------------------------")
-    print("Bienvenidos al Restaurante Aqui se come rico")
-    print("----------------------------------------------------------------------")
-    print()
+# from ejercicio8.clases.mesa import Mesa
+# from ejercicio8.clases.restaurante import Restaurante
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos al Restaurante Aqui se come rico")
+#     print("----------------------------------------------------------------------")
+#     print()
 
-    restaurante = Restaurante("Aqui se come rico")
+#     restaurante = Restaurante("Aqui se come rico")
 
-    mesa1 = Mesa(1, 4)
-    mesa2 = Mesa(2, 2)
-    mesa3 = Mesa(3, 6)
+#     mesa1 = Mesa(1, 4)
+#     mesa2 = Mesa(2, 2)
+#     mesa3 = Mesa(3, 6)
 
-    restaurante.agregar_mesa(mesa1)
-    restaurante.agregar_mesa(mesa2)
-    restaurante.agregar_mesa(mesa3)
-    print()
+#     restaurante.agregar_mesa(mesa1)
+#     restaurante.agregar_mesa(mesa2)
+#     restaurante.agregar_mesa(mesa3)
+#     print()
 
-    restaurante.mostrar_estado_mesas()
-    print()
+#     restaurante.mostrar_estado_mesas()
+#     print()
 
-    restaurante.reservar_mesa(2)
-    restaurante.reservar_mesa(3)
-    print()
+#     restaurante.reservar_mesa(2)
+#     restaurante.reservar_mesa(3)
+#     print()
 
-    restaurante.mostrar_estado_mesas()
-    print()
+#     restaurante.mostrar_estado_mesas()
+#     print()
 
-    restaurante.liberar_mesa(2)
-    print()
+#     restaurante.liberar_mesa(2)
+#     print()
 
-    restaurante.mostrar_estado_mesas()
-    print()
+#     restaurante.mostrar_estado_mesas()
+#     print()
 
                         
-# --------------Ejecicio 8---------------- 
+# --------------Ejecicio 9----------------
+# from ejercicio9.clases.producto import Producto
+# from ejercicio9.clases.carrito import carrito
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos a la Tienda Online con Descuentos")
+#     print("----------------------------------------------------------------------")
+#     print()
 
-# Ejercicio 9 — Carrito con Descuento 
-# Crea una clase Producto con nombre y precio. Crea una clase Carrito que permita agregar 
-# productos con cantidad, calcular total y aplicar un descuento en porcentaje. 
+#     carrito_compras = carrito()
+
+#     producto1 = Producto("Cama", 800.00)
+#     producto2 = Producto("Equipo de musica", 500.00)
+#     producto3 = Producto("Auriculares", 150.00)
+
+#     carrito_compras.agregar_producto(producto1, 1)
+#     carrito_compras.agregar_producto(producto2, 2)
+#     carrito_compras.agregar_producto(producto3, 3)
+#     print()
+
+#     carrito_compras.mostrar_carrito()
+#     print()
+
+#     total_sin_descuento = carrito_compras.calcular_total()
+#     print(f"Total sin descuento: ${total_sin_descuento:.2f}")
+#     print()
+
+#     porcentaje_descuento = 10  
+#     total_con_descuento = carrito_compras.aplicar_descuento(porcentaje_descuento)
+#     print(f"Total con {porcentaje_descuento}% de descuento: ${total_con_descuento:.2f}")
+#     print()
+
+
+#--------------Ejecicio 10----------------
 # Ejercicio 10 — Estudiante y Nota 
-# Crea una clase Nota con asignatura y calificación. Crea una clase Estudiante con nombre y una lista 
-# de notas. Agrega métodos para añadir una nota, calcular el promedio y mostrar todas las 
+#Agrega métodos para añadir una nota, calcular el promedio y mostrar todas las 
+from ejercicio10.clases.nota import Nota
+from ejercicio10.clases.estudiante import Estudiante        
+
+if __name__ == "__main__":
+    print("----------------------------------------------------------------------")
+    print("Bienvenidos, aqui se registran las notas de los estudiantes")
+    print("----------------------------------------------------------------------")
+    print()
+
+    estudiante1 = Estudiante("Ruth Diaz")
+
+    nota1 = Nota("Matemáticas", 70)
+    nota2 = Nota("Historia", 65)
+    nota3 = Nota("Ciencias", 60)
+
+    estudiante1.agregar_nota(nota1)
+    estudiante1.agregar_nota(nota2)
+    estudiante1.agregar_nota(nota3)
+    print()
+
+    print(f"Notas de {estudiante1.nombre}:")
+    estudiante1.mostrar_notas()
+    print()
+
+    promedio = estudiante1.calcular_promedio()
+    print(f"Promedio de calificaciones: {promedio:.2f}")
+    print()
+
+
+
 # calificaciones. 
 # Ejercicio 11 — Empleado y Empresa 
 # Crea una clase Empleado con nombre y sueldo. Crea una clase Empresa con lista de empleados. 
