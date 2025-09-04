@@ -1,4 +1,3 @@
-# ejercicio3/Item.py
 class Item:
     def __init__(self, nombre, precio, cantidad):
         self.nombre = nombre
