@@ -1,0 +1,28 @@
+##Crea una clase Nota con asignatura y calificación.
+##Crea una clase Estudiante con nombre y una lista de notas. Agrega métodos para añadir una nota, calcular el promedio y mostrar todas las calificaciones.
+
+class Nota:
+    def __init__(self, asignatura, calificacion):
+        self.asignatura = asignatura
+        self.calificacion = calificacion
+
+
+class Estudiante:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.notas = []
+
+    def agregar_nota(self, nota):
+        self.notas.append(nota)
+
+    def calcular_promedio(self):
+        if not self.notas:
+            return 0
+        total = sum(n.calificacion for n in self.notas)
+        return total / len(self.notas)
+
+    def mostrar_notas(self):
+        for n in self.notas:
+            print(f"{n.asignatura}: {n.calificacion}")
+
+

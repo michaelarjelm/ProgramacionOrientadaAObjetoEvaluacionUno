@@ -142,6 +142,77 @@ agenda.eliminar_contacto("-Samuel")
 print("-Lista actualizada:")
 agenda.listar_contactos()
 
-## ===== desarrollo ejercicio_ ===== ##
+## ===== desarrollo ejercicio_8 ===== ##
 print ("_______Ejercicio OCHO_______")
 
+from ejercicio_8.restaurante_mesa_reseva import Mesa, Restaurante
+
+restaurante_donSamu = Restaurante()
+
+restaurante_donSamu.agregar_mesa(Mesa(1, 4))
+restaurante_donSamu.agregar_mesa(Mesa(2, 2))
+
+
+restaurante_donSamu.mostrar_estado()
+
+restaurante_donSamu.reservar_mesa(1)
+restaurante_donSamu.mostrar_estado()
+
+
+restaurante_donSamu.liberar_mesa(1)
+restaurante_donSamu.mostrar_estado()
+
+## ===== desarrollo ejercicio_9 ===== ##
+print ("_______Ejercicio NUEVE_______")
+from ejercicio_9.carrito_conDescuento import Producto, Carrito
+
+p1 = Producto("Pan", 1000)
+p2 = Producto("Leche", 1500)
+
+carrito = Carrito()
+
+carrito.agregar_producto(p1, 2)  
+carrito.agregar_producto(p2, 3)  
+
+print("Total sin descuento:", carrito.calcular_total)
+
+
+print("Total con 10% de descuento:", carrito.aplicar_descuento)
+
+## ===== desarrollo ejercicio_10 ===== ##
+print ("_______Ejercicio DIEZ_______")
+from ejercicio_10.estudiante_nota import Estudiante,Nota
+
+
+estudiante = Estudiante("Samuel")
+
+estudiante.agregar_nota(Nota("Matemáticas", 7))
+estudiante.agregar_nota(Nota("Historia", 6))
+estudiante.agregar_nota(Nota("Inglés", 5))
+
+
+print("Notas del estudiante:")
+estudiante.mostrar_notas()
+
+print("Promedio:", estudiante.calcular_promedio())
+
+## ===== desarrollo ejercicio_11 ===== ##
+
+print ("_______Ejercicio ONCE_______")
+
+from ejercicio_11.empleado_empresa import Empleado, Empresa
+
+
+empresa_pc = Empresa()
+
+empresa_pc.contratar(Empleado("- Samuel", 190000))
+empresa_pc.contratar(Empleado("- Camilo", 150000))
+
+
+print("Empleados actuales:")
+empresa_pc.listar_empleados()
+
+print("\nGasto total en sueldos:", empresa_pc.gasto_total_sueldos())
+
+## ===== desarrollo ejercicio_12===== ##
+print ("_______Ejercicio DOCE_______")

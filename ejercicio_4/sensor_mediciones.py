@@ -8,7 +8,7 @@ class Sensor:
 
     def registrar (self, medicion):
         self.listaMediciones.append (medicion)
-        print (f"-Se ha registrado una Tº de: {medicion} grados en el sensor {self.nombre} el dia de hoy.")
+        print (f"- Se ha registrado una Tº de: {medicion} grados en el sensor {self.nombre} el dia de hoy.")
         
     def promedio (self):
         self.promMedicion = round(sum(self.listaMediciones) / len(self.listaMediciones), 1)
