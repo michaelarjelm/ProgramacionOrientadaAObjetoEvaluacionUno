@@ -1,0 +1,29 @@
+from alumno import Alumno
+
+class Curso:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.alumnos = []
+
+    def inscribir_alumno(self, alumno):
+        if alumno not in self.alumnos:
+            self.alumnos.append(alumno)
+            print(f" Alumno {alumno.nombre} inscrito en el curso {self.nombre}.")
+        else:
+            print(f" El alumno {alumno.nombre} ya está inscrito.")
+
+    def remover_alumno(self, nombre):
+        for alumno in self.alumnos:
+            if alumno.nombre.lower() == nombre.lower():
+                self.alumnos.remove(alumno)
+                print(f" Alumno {nombre} removido del curso {self.nombre}.")
+                return
+        print(f" Alumno {nombre} no encontrado en el curso.")
+
+    def listar_alumnos(self):
+        if not self.alumnos:
+            print(f" No hay alumnos inscritos en {self.nombre}.")
+        else:
+            print(f"\n--- Alumnos en {self.nombre} ---")
+            for alumno in self.alumnos:
+                print(alumno)
