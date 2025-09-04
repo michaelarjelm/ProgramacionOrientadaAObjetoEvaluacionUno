@@ -221,57 +221,80 @@
 
  
 #--------------Ejecicio 7----------------
-from ejercicio7.clases.contacto import Contacto
-from ejercicio7.clases.agenda import Agenda     
-if __name__ == "__main__":
-    print("----------------------------------------------------------------------")
-    print("Bienvenidos a la Agenda de Contactos")
-    print("----------------------------------------------------------------------")
-    print()
+# from ejercicio7.clases.contacto import Contacto
+# from ejercicio7.clases.agenda import Agenda     
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos a la Agenda de Contactos")
+#     print("----------------------------------------------------------------------")
+#     print()
 
-    agenda = Agenda()
-    contacto1 = Contacto("Ruth Diaz", "123456789", "rdiazmarchant@gmial.com")
-    contacto2 = Contacto("Alexander Murillo", "191919191", "Amurillod@gmial.com")
+#     agenda = Agenda()
+#     contacto1 = Contacto("Ruth Diaz", "123456789", "rdiazmarchant@gmial.com")
+#     contacto2 = Contacto("Alexander Murillo", "191919191", "Amurillod@gmial.com")
 
-    agenda.agregar_contacto(contacto1)
-    agenda.agregar_contacto(contacto2)  
-    print()
+#     agenda.agregar_contacto(contacto1)
+#     agenda.agregar_contacto(contacto2)  
+#     print()
 
-    agenda.listar_contactos()
-    print()
+#     agenda.listar_contactos()
+#     print()
 
-    nombre_buscar = "Ruth Diaz"
-    contacto_encontrado = agenda.buscar_contacto(nombre_buscar)
-    if contacto_encontrado:
-        print(f"Contacto encontrado: {contacto_encontrado}")    
-    print()
+#     nombre_buscar = "Ruth Diaz"
+#     contacto_encontrado = agenda.buscar_contacto(nombre_buscar)
+#     if contacto_encontrado:
+#         print(f"Contacto encontrado: {contacto_encontrado}")    
+#     print()
 
-    agenda.eliminar_contacto("Alexander Murillo")
-    print()
-    
-    #probar contacto no registrado
-    agenda.eliminar_contacto("Nancy Marchant")
-    print()
+#     agenda.eliminar_contacto("Alexander Murillo")
+#     print()
 
-    agenda.listar_contactos()
-    print()
+#     #probar contacto no registrado
+#     agenda.eliminar_contacto("Nancy Marchant")
+#     print()
+
+#     agenda.listar_contactos()
+#     print()
 #--------------Ejecicio 8----------------
 
+from ejercicio8.clases.mesa import Mesa
+from ejercicio8.clases.restaurante import Restaurante
+if __name__ == "__main__":
+    print("----------------------------------------------------------------------")
+    print("Bienvenidos al Restaurante Aqui se come rico")
+    print("----------------------------------------------------------------------")
+    print()
 
+    restaurante = Restaurante("Aqui se come rico")
 
-                         
+    mesa1 = Mesa(1, 4)
+    mesa2 = Mesa(2, 2)
+    mesa3 = Mesa(3, 6)
 
+    restaurante.agregar_mesa(mesa1)
+    restaurante.agregar_mesa(mesa2)
+    restaurante.agregar_mesa(mesa3)
+    print()
 
+    restaurante.mostrar_estado_mesas()
+    print()
 
+    restaurante.reservar_mesa(2)
+    restaurante.reservar_mesa(3)
+    print()
 
-# Ejercicio 7 — Agenda y Contacto 
-# Crea una clase Contacto con nombre, teléfono y correo. Crea una clase Agenda que permita 
-# agregar, buscar, eliminar y listar contactos.
+    restaurante.mostrar_estado_mesas()
+    print()
 
+    restaurante.liberar_mesa(2)
+    print()
+
+    restaurante.mostrar_estado_mesas()
+    print()
+
+                        
 # --------------Ejecicio 8---------------- 
-# Ejercicio 8 — Restaurante, Mesa y Reserva 
-# Crea una clase Mesa con número, capacidad y estado (ocupada o libre). Crea una clase 
-# Restaurante que permita agregar mesas, reservar, liberar y mostrar estado de todas las mesas. 
+
 # Ejercicio 9 — Carrito con Descuento 
 # Crea una clase Producto con nombre y precio. Crea una clase Carrito que permita agregar 
 # productos con cantidad, calcular total y aplicar un descuento en porcentaje. 
