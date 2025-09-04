@@ -1,4 +1,3 @@
-# ejercicio2/Curso.py
 class Curso:
     def __init__(self, nombre):
         self.nombre = nombre
