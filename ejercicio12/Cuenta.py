@@ -1,4 +1,3 @@
-# ejercicio12/Cuenta.py
 class Cuenta:
     def __init__(self, titular, saldo):
         self.titular = titular
