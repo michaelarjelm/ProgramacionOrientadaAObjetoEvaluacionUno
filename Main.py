@@ -1,7 +1,3 @@
-# main.py
-# Este archivo permite ingresar valores interactivamente para cada ejercicio.
-# Los valores se solicitan al usuario mediante input() y se usan con las clases correspondientes.
-
 # Ejercicio 1: Libro y Biblioteca
 from ejercicio1.Libro import Libro
 from ejercicio1.Biblioteca import Biblioteca
