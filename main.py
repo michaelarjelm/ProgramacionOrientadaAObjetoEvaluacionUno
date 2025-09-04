@@ -151,63 +151,75 @@
 #     print()
 
 #--------------Ejecicio 5----------------
-from ejercicio5.clases.pelicula import Pelicula
-from ejercicio5.clases.catalogo import Catalogo
+# from ejercicio5.clases.pelicula import Pelicula
+# from ejercicio5.clases.catalogo import Catalogo
+
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos al Catálogo de Blockbuster - Estrenos 2025")
+#     print("----------------------------------------------------------------------")
+#     print()
+
+#     catalogo = Catalogo()
+
+#     pelicula1 = Pelicula("Avatar 3", "Ciencia Ficción", 2025)
+#     pelicula2 = Pelicula("Misión Imposible: Sentencia Final", "Acción", 2025)
+#     pelicula3 = Pelicula("Inside Out 2", "Animación", 2025) 
+#     pelicula4 = Pelicula("Jurassic World: Renacimiento", "Aventura", 2025)
+#     pelicula5 = Pelicula("Downton Abbey 3", "Drama", 2025)
+
+#     catalogo.agregar_pelicula(pelicula1)
+#     catalogo.agregar_pelicula(pelicula2)
+#     catalogo.agregar_pelicula(pelicula3)
+#     catalogo.agregar_pelicula(pelicula4)
+#     catalogo.agregar_pelicula(pelicula5)
+#     print()
+
+#     print("Listado de todas las películas:")
+#     for pelicula in catalogo.listar_todas():
+#         print(pelicula)
+#     print()
+
+#     genero_filtro = "Drama"
+#     print(f"Películas del género '{genero_filtro}':")
+#     for pelicula in catalogo.filtrar_por_genero(genero_filtro):
+#         print(pelicula)
+#     print()
+
+#     titulo_buscar = "Avatar 3"
+#     pelicula_encontrada = catalogo.buscar_por_titulo(titulo_buscar)
+#     if pelicula_encontrada:
+#         print(f"Película encontrada: {pelicula_encontrada}")
+#     print()
+
+#--------------Ejecicio 6----------------
+from ejercicio6.clases.auth import Auth
+from ejercicio6.clases.usuario import Usuario
 
 if __name__ == "__main__":
     print("----------------------------------------------------------------------")
-    print("Bienvenidos al Catálogo de Blockbuster - Estrenos 2025")
+    print("Bienvenidos al Sistema de Autenticación")
     print("----------------------------------------------------------------------")
     print()
 
-    catalogo = Catalogo()
+    auth_system = Auth()
 
-    pelicula1 = Pelicula("Avatar 3", "Ciencia Ficción", 2025)
-    pelicula2 = Pelicula("Misión Imposible: Sentencia Final", "Acción", 2025)
-    pelicula3 = Pelicula("Inside Out 2", "Animación", 2025) 
-    pelicula4 = Pelicula("Jurassic World: Renacimiento", "Aventura", 2025)
-    pelicula5 = Pelicula("Downton Abbey 3", "Drama", 2025)
-
-    catalogo.agregar_pelicula(pelicula1)
-    catalogo.agregar_pelicula(pelicula2)
-    catalogo.agregar_pelicula(pelicula3)
-    catalogo.agregar_pelicula(pelicula4)
-    catalogo.agregar_pelicula(pelicula5)
+    auth_system.registrar("ruth", "password123")
+    auth_system.registrar("alexander", "securepass")
+    auth_system.registrar("nancy", "mypassword")
     print()
 
-    print("Listado de todas las películas:")
-    for pelicula in catalogo.listar_todas():
-        print(pelicula)
+    auth_system.login("ruth", "password123")  
     print()
 
-    genero_filtro = "Drama"
-    print(f"Películas del género '{genero_filtro}':")
-    for pelicula in catalogo.filtrar_por_genero(genero_filtro):
-        print(pelicula)
+    print("Intento de login con credenciales incorrectas:")
+    auth_system.login("alexander", "wrongpass")  
     print()
-
-    titulo_buscar = "Avatar 3"
-    pelicula_encontrada = catalogo.buscar_por_titulo(titulo_buscar)
-    if pelicula_encontrada:
-        print(f"Película encontrada: {pelicula_encontrada}")
-    print()
-
-
-
-
-
-
     
+    auth_system.login("nancy", "mypassword")  
+    print()
 
-# Ejercicio 5 — Película y Catálogo 
-# Crea una clase película con título, género y año. Crea una clase Catalogo que permita agregar 
-# películas, filtrar por género, buscar por título y listar todas. 
-
-#--------------Ejecicio 6----------------
-# Ejercicio 6 — Usuario y Autenticación simple 
-# Crea una clase Usuario con nombre de usuario y contraseña. Crea una clase Auth que permita 
-# registrar usuarios y hacer login validando credenciales. 
-
+ 
 #--------------Ejecicio 7----------------
 # Ejercicio 7 — Agenda y Contacto 
 # Crea una clase Contacto con nombre, teléfono y correo. Crea una clase Agenda que permita 
