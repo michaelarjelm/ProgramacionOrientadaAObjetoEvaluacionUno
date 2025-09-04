@@ -1,5 +1,6 @@
 from statistics import mean
 
+
 class Sensor:
     def __init__(self, nombre):
         self.nombre = nombre

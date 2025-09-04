@@ -1,6 +1,7 @@
 from statistics import mean
 from math import trunc
 
+
 class Veterinaria:
     def __init__(self, nombre):
         self.nombre = nombre

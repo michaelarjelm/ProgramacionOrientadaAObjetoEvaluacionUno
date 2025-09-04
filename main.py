@@ -26,8 +26,10 @@ from Ejercicio13.clases.veterinaria import Veterinaria
 from Ejercicio14.clases.examen import Examen
 from Ejercicio14.clases.pregunta import Pregunta
 
+
 def p():
     print("--------------------------------")
+
 
 print("\n\t==== Ejercicio 1: Libro y Biblioteca ====")
 
