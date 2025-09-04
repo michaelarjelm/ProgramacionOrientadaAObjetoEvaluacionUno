@@ -1,17 +1,22 @@
-# Crear biblioteca y libros
-biblio = Biblioteca()
+from Ejercicio1.LibroBiblioteca import Libro
+from Ejercicio1.LibroBiblioteca import Biblioteca
 
-libro1 = Libro("Harry Potter", "J.K. Rowling", 2)
-libro2 = Libro("El Hobbit", "J.R.R. Tolkien", 1)
+def main():
+    biblioteca = Biblioteca()
 
-# Agregar libros
-biblio.agregar_libro(libro1)
-biblio.agregar_libro(libro2)
+    libro1 = Libro("El escarabajo de oro", "Allan Poe", 2)
+    libro2 = Libro("Terapia para llevar", "Ana Perez", 1)
 
-# Mostrar libros
-biblio.mostrar_libros()
+    biblioteca.agregar_libro(libro1)
+    biblioteca.agregar_libro(libro2)
 
-# Prestar y devolver libros
-biblio.prestar_libro("Harry Potter")
-biblio.devolver_libro("Harry Potter")
-biblio.mostrar_libros()
+    biblioteca.mostrar_libros()
+
+    biblioteca.prestar_libro("El Principito")
+    biblioteca.mostrar_libros()
+
+    biblioteca.devolver_libro("El Principito")
+    biblioteca.mostrar_libros()
+
+
+

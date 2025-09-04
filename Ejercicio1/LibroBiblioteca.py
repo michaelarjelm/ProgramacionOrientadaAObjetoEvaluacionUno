@@ -34,9 +34,6 @@ class Biblioteca:
 
 
 
-
-
-
 #Ejercicio 1 — Libro y Biblioteca
 #Crea una clase Libro con título, autor y cantidad de copias. 
 # Crea una clase Biblioteca que permita agregar libros, prestar, devolver y mostrar listado de libros
