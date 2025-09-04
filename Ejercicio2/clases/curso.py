@@ -3,16 +3,16 @@ class Curso:
         self.nombre = nombre
         self.alumnos = []
     
-    def inscribir_alumno(self, nombre_alumno):
-        self.alumnos.append(nombre_alumno)
-        print(f"\n** {nombre_alumno} agregado al curso '{self.nombre}' con exito **")
+    def inscribir_alumno(self, alumno):
+        self.alumnos.append(alumno)
+        print(f"\n{alumno} agregado al curso '{self.nombre}' con exito")
 
-    def remover_alumno(self, nombre_alumno):
-        if nombre_alumno in self.alumnos:
-            self.alumnos.remove(nombre_alumno)
-            print(f"\n** Se removio a {nombre_alumno} del curso {self.nombre} **")
+    def remover_alumno(self, alumno):
+        if alumno in self.alumnos:
+            self.alumnos.remove(alumno)
+            print(f"\nSe removio a {alumno} del curso {self.nombre}")
         else:
-            print(f"\nAlumno '{nombre_alumno}' no está registrado en el curso {self.nombre}")
+            print(f"\nAlumno '{alumno}' no está registrado en el curso {self.nombre}")
     
     def listar_alumnos(self):
         if not self.alumnos:

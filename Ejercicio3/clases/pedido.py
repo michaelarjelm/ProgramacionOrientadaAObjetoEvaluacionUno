@@ -17,4 +17,4 @@ class Pedido:
                 print(f"* {item.nombre} ${item.precio} x {item.cantidad}")
             print(f"\nTotal: ${total}")
         else:
-            print("\n--- El pedido está vacio ---")
+            print("\nEl pedido está vacio")

@@ -1,3 +1,5 @@
+from statistics import mean
+
 class Estudiante:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -12,7 +14,7 @@ class Estudiante:
             total_notas = []
             for nota in self.notas:
                 total_notas.append(nota.calificacion)
-            print(f"\nPromedio de notas: {sum(total_notas) / len(total_notas):.2f}")
+            print(f"\nPromedio de notas: {mean(total_notas):.2f}")
         else:
             print("\nNo tienes notas para promediar")
 

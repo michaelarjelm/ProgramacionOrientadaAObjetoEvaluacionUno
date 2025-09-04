@@ -1,3 +1,5 @@
+from statistics import mean
+
 class Sensor:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -8,7 +10,7 @@ class Sensor:
 
     def promedio(self):
         if self.mediciones:
-            return f"Promedio: {sum(self.mediciones) / len(self.mediciones):.2f}"
+            return f"Promedio: {mean(self.mediciones):.2f}"
         else:
             print("No tienes valores para promediar")
     

@@ -20,12 +20,12 @@ class Catalogo:
             else:
                 print(f"\nNo hay peliculas en el genero {genero.upper()}")
         else:
-            print("\n-- El catalogo esta vacio --")
+            print("\nEl catalogo esta vacio")
 
     def buscar_por_titulo(self, pelicula):
         if self.catalogo:
             if pelicula in self.catalogo:
-                print("\n-- Resultado de la busqueda: \n")
+                print("\nResultado de la busqueda: \n")
                 print(f"* Titulo: {pelicula.titulo} | Genero: {pelicula.genero} | Año: {pelicula.año}")
             else:
                 print("Pelicula no encontrada")  

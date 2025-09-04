@@ -1,5 +1,3 @@
-from math import trunc
-
 class Empresa:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -23,6 +21,6 @@ class Empresa:
             for empleado in self.empleados:
                 sueldos.append(empleado.sueldo)
             print("\n-- Pago de sueldos --\n")
-            print(f"Total: ${trunc(sum(sueldos) / len(sueldos))}\n")
+            print(f"Total a pagar: ${sum(sueldos)}\n")
         else:
             print("No hay sueldos para calcular")
