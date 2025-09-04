@@ -1,4 +1,3 @@
-# ejercicio12/Banco.py
 class Banco:
     def __init__(self):
         self.cuentas = []
