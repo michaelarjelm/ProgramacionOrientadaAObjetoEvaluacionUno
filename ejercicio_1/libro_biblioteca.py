@@ -24,8 +24,7 @@ class Biblioteca:
         print(f"-Te hemos prestado el libro: {libro.titulo}")
         return
     
-    print("___________________________________________________________________________________________")
-   
+    
     def devolver(self, titulo):
         for libro in self.libros:
             if libro.titulo == titulo:
@@ -38,8 +37,8 @@ class Biblioteca:
             print(f"- Autor del libro: {libro.autor}")
             print(f"- Copias disponibles: {libro.copias}")
             
-    print("___________________________________________________________________________________________")
-   
+    
+
 
 
 

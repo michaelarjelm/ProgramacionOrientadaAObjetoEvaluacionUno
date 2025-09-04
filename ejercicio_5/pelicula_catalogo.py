@@ -32,22 +32,3 @@ class Catalogo:
         resultados = [p for p in self.peliculas if p.genero.lower() == genero.lower()]
         return resultados
 
-pelicula1 = Pelicula("Matrix", "Ciencia Ficción", 1999)
-pelicula2 = Pelicula("El Padrino", "Drama", 1972)
-pelicula3 = Pelicula("Toy Story", "Animación", 1995)
-
-catalogo = Catalogo()
-catalogo.agregar_pelicula(pelicula1)
-catalogo.agregar_pelicula(pelicula2)
-catalogo.agregar_pelicula(pelicula3)
-
-print("📋 Todas las películas:")
-catalogo.listar_todas()
-
-print("\n🔎 Buscar por título 'Matrix':")
-for p in catalogo.buscar_por_titulo("Matrix"):
-    print(p)
-
-print("\n🎬 Filtrar por género 'Drama':")
-for p in catalogo.filtrar_por_genero("Drama"):
-    print(p)

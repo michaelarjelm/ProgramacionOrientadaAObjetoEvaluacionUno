@@ -16,7 +16,6 @@ mi_biblioteca.agregar(libro3)
 mi_biblioteca.prestar("El corazon delator.")
 
 mi_biblioteca.devolver("Cien años de soledad.")
-
 print("-------libros disponibles-------")
 
 mi_biblioteca.mostrar() 
@@ -103,4 +102,46 @@ print(" Filtrar por género 'Drama:")
 for p in catalogo.filtrar_por_genero("Drama"):
     print(p)
 
+
+## ===== desarrollo ejercicio_6 ===== ##
+print ("_______Ejercicio SEIS_______")
+
+from ejercicio_6.usuario_autenticacion import Auth
+auth = Auth()
+
+auth.registrar("- Samuel", "1234")
+auth.registrar("- Camilo", "abcd")
+
+auth.login("Samuel", "1234")  
+auth.login("Samuel", "xxxx")  
+
+
+## ===== desarrollo ejercicio_7 ===== ##
+
+print ("_______Ejercicio SIETE_______")
+
+from ejercicio_7.agenda_contacto import Contacto,Agenda
+    
+agenda = Agenda()
+
+c1 = Contacto("- Samuel", "12345678", "samuel@mail.com")
+c2 = Contacto("- Maria", "987654321", "maria@mail.com")
+
+agenda.agregar_contacto(c1)
+agenda.agregar_contacto(c2)
+
+print("Lista de contactos:")
+agenda.listar_contactos()
+
+print("-Buscar a Maria:")
+agenda.buscar_contacto("Maria")
+
+print("-Eliminar a Samuel:")
+agenda.eliminar_contacto("-Samuel")
+
+print("-Lista actualizada:")
+agenda.listar_contactos()
+
+## ===== desarrollo ejercicio_ ===== ##
+print ("_______Ejercicio OCHO_______")
 
