@@ -388,44 +388,104 @@
 #     print()
 #-------------------ejecicio 12------------------------ 
 
-from ejercicio12.clases.cuenta import Cuenta
-from ejercicio12.clases.banco import Banco  
+# from ejercicio12.clases.cuenta import Cuenta
+# from ejercicio12.clases.banco import Banco  
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos al Banco del Barrio")
+#     print("----------------------------------------------------------------------")
+#     print()
+
+#     banco = Banco()
+
+#     cuenta1 = Cuenta("Ruth Diaz", 100000)
+#     cuenta2 = Cuenta("Alexander Murillo", 150000)
+#     cuenta3 = Cuenta("Joaquin Díaz", 200000)
+
+#     banco.abrir_cuenta(cuenta1)
+#     banco.abrir_cuenta(cuenta2)
+#     banco.abrir_cuenta(cuenta3)
+#     print()
+
+#     print("Estado inicial de las cuentas:")
+#     banco.mostrar_estado_cuentas()
+#     print()
+
+#     banco.transferir_dinero("Ruth Diaz", "Alexander Murillo", 300)
+#     print("Estado de las cuentas después de la transferencia:")
+#     banco.mostrar_estado_cuentas()
+#     print()
+
+#     banco.transferir_dinero("Nancy Marchant", "Ruth Diaz", 500)
+#     print("Estado de las cuentas después de la segunda transferencia:")
+#     banco.mostrar_estado_cuentas()
+#     print()
+
+#-------------------ejercicios 13------------------------
+
+# from ejercicio13.clases.mascota import Mascota
+# from ejercicio13.clases.veterinaria import Veterinaria
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos a la Veterinaria Narices Frías, no tenemos fonasa")
+#     print("----------------------------------------------------------------------")
+#     print()
+
+#     veterinaria = Veterinaria()
+
+#     mascota1 = Mascota("Wudy", "Perro", 12)
+#     mascota2 = Mascota("Pandy", "Gata", 9)
+#     mascota3 = Mascota("Linda", "Perra", 9)
+
+#     veterinaria.registrar_mascota(mascota1)
+#     veterinaria.registrar_mascota(mascota2)
+#     veterinaria.registrar_mascota(mascota3)
+#     print()
+
+#     print("Estas son todas las mascotas:")
+#     veterinaria.listar_todas()
+#     print()
+
+#     print("Buscando una mascota por nombre:")
+#     nombre_buscar = "Michi" #probando erroneo
+#     mascota_encontrada = veterinaria.buscar_por_nombre(nombre_buscar)
+#     if mascota_encontrada:
+#         print(f"Mascota encontrada: Nombre: {mascota_encontrada.nombre}, Especie: {mascota_encontrada.especie}, Edad: {mascota_encontrada.edad} años")
+#     else:
+#         print(f"No se encontró ninguna mascota con el nombre '{nombre_buscar}'")
+#     print()
+
+#     edad_promedio = veterinaria.calcular_edad_promedio()
+#     print(f"Edad promedio de las mascotas: {edad_promedio:.2f} años")
+#     print()
+
+#-------------------ejercicios 14------------------------
+from ejercicio14.clases.pregunta import Pregunta
+from ejercicio14.clases.examen import Examen    
 if __name__ == "__main__":
     print("----------------------------------------------------------------------")
-    print("Bienvenidos al Banco del Barrio")
+    print("Bienvenidos al sistema de Examen sorpresa")
     print("----------------------------------------------------------------------")
     print()
 
-    banco = Banco()
+    examen = Examen()
 
-    cuenta1 = Cuenta("Ruth Diaz", 100000)
-    cuenta2 = Cuenta("Alexander Murillo", 150000)
-    cuenta3 = Cuenta("Joaquin Díaz", 200000)
+    pregunta1 = Pregunta("¿Cuál es el primer libro de la Biblia?", "Genesis")
+    pregunta2 = Pregunta("¿Cuanto es 1 + 2?", "3")
+    pregunta3 = Pregunta("¿Que aparecio despues del diluvio?", "Un arcoiris")   
 
-    banco.abrir_cuenta(cuenta1)
-    banco.abrir_cuenta(cuenta2)
-    banco.abrir_cuenta(cuenta3)
+    examen.agregar_pregunta(pregunta1)
+    examen.agregar_pregunta(pregunta2)
+    examen.agregar_pregunta(pregunta3)
     print()
 
-    print("Estado inicial de las cuentas:")
-    banco.mostrar_estado_cuentas()
+    print("Listado de preguntas del examen:")
+    examen.listar_preguntas()
     print()
 
-    banco.transferir_dinero("Ruth Diaz", "Alexander Murillo", 300)
-    print("Estado de las cuentas después de la transferencia:")
-    banco.mostrar_estado_cuentas()
+    total_preguntas = examen.contar_preguntas()
+    print(f"Total de preguntas en el examen: {total_preguntas}")
     print()
 
-    banco.transferir_dinero("Nancy Marchant", "Ruth Diaz", 500)
-    print("Estado de las cuentas después de la segunda transferencia:")
-    banco.mostrar_estado_cuentas()
-    print()
-# Ejercicio 13 — Veterinaria y Mascotas 
-# Crea una clase Mascota con nombre, especie y edad. Crea una clase Veterinaria que permita 
-# registrar mascotas, buscar por nombre, listar todas y calcular la edad promedio de las mascotas. 
-# Ejercicio 14 — Examen y Preguntas 
-# Crea una clase Pregunta con enunciado y respuesta correcta. Crea una clase Examen con una lista 
-# de preguntas. Agrega métodos para añadir preguntas, listar preguntas y contar el total de 
-# preguntas del examen.
-# from ejercicio5.clases.cuenta_bancaria import CuentaBancaria
-# from ejercicio5.clases.cliente import Cliente
+
+print("fin del programaaaaaa por fin por fin no mas ejercicios  ")
