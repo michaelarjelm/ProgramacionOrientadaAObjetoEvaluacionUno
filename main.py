@@ -327,46 +327,99 @@
 
 
 #--------------Ejecicio 10----------------
-# Ejercicio 10 — Estudiante y Nota 
-#Agrega métodos para añadir una nota, calcular el promedio y mostrar todas las 
-from ejercicio10.clases.nota import Nota
-from ejercicio10.clases.estudiante import Estudiante        
 
+# from ejercicio10.clases.nota import Nota
+# from ejercicio10.clases.estudiante import Estudiante        
+
+# if __name__ == "__main__":
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos, aqui se registran las notas de los estudiantes")
+#     print("----------------------------------------------------------------------")
+#     print()
+
+#     estudiante1 = Estudiante("Ruth Diaz")
+
+#     nota1 = Nota("Matemáticas", 70)
+#     nota2 = Nota("Historia", 65)
+#     nota3 = Nota("Ciencias", 60)
+
+#     estudiante1.agregar_nota(nota1)
+#     estudiante1.agregar_nota(nota2)
+#     estudiante1.agregar_nota(nota3)
+#     print()
+
+#     print(f"Notas de {estudiante1.nombre}:")
+#     estudiante1.mostrar_notas()
+#     print()
+
+#     promedio = estudiante1.calcular_promedio()
+#     print(f"Promedio de calificaciones: {promedio:.2f}")
+#     print()
+
+
+#-------------ejercicios 11--------------------------
+
+# from ejercicio11.clases.empresa import Empresa
+# from ejercicio11.clases.empleado import Empleado    
+# if __name__ == "__main__":
+
+#     print("----------------------------------------------------------------------")
+#     print("Bienvenidos a la Empresa del transnoche")
+#     print("----------------------------------------------------------------------")
+#     print()
+
+#     empresa = Empresa()
+
+#     empleado1 = Empleado("Ruth Diaz", 1000000)
+#     empleado2 = Empleado("Alexander Murillo", 1200000)
+#     empleado3 = Empleado("Nancy Marchant", 1300000)
+
+#     empresa.contratar_empleado(empleado1)
+#     empresa.contratar_empleado(empleado2)
+#     empresa.contratar_empleado(empleado3)
+#     print()
+
+#     print("Listado de empleados:")
+#     empresa.listar_empleados()
+#     print()
+
+#     gasto_total = empresa.gasto_total_sueldos()
+#     print(f"Gasto total en sueldos de la empresa: ${gasto_total:.2f}")
+#     print()
+#-------------------ejecicio 12------------------------ 
+
+from ejercicio12.clases.cuenta import Cuenta
+from ejercicio12.clases.banco import Banco  
 if __name__ == "__main__":
     print("----------------------------------------------------------------------")
-    print("Bienvenidos, aqui se registran las notas de los estudiantes")
+    print("Bienvenidos al Banco del Barrio")
     print("----------------------------------------------------------------------")
     print()
 
-    estudiante1 = Estudiante("Ruth Diaz")
+    banco = Banco()
 
-    nota1 = Nota("Matemáticas", 70)
-    nota2 = Nota("Historia", 65)
-    nota3 = Nota("Ciencias", 60)
+    cuenta1 = Cuenta("Ruth Diaz", 100000)
+    cuenta2 = Cuenta("Alexander Murillo", 150000)
+    cuenta3 = Cuenta("Joaquin Díaz", 200000)
 
-    estudiante1.agregar_nota(nota1)
-    estudiante1.agregar_nota(nota2)
-    estudiante1.agregar_nota(nota3)
+    banco.abrir_cuenta(cuenta1)
+    banco.abrir_cuenta(cuenta2)
+    banco.abrir_cuenta(cuenta3)
     print()
 
-    print(f"Notas de {estudiante1.nombre}:")
-    estudiante1.mostrar_notas()
+    print("Estado inicial de las cuentas:")
+    banco.mostrar_estado_cuentas()
     print()
 
-    promedio = estudiante1.calcular_promedio()
-    print(f"Promedio de calificaciones: {promedio:.2f}")
+    banco.transferir_dinero("Ruth Diaz", "Alexander Murillo", 300)
+    print("Estado de las cuentas después de la transferencia:")
+    banco.mostrar_estado_cuentas()
     print()
 
-
-
-# calificaciones. 
-# Ejercicio 11 — Empleado y Empresa 
-# Crea una clase Empleado con nombre y sueldo. Crea una clase Empresa con lista de empleados. 
-# Agrega métodos para contratar empleados, listar empleados y calcular el gasto total en sueldos. 
-# Ejercicio 12 — Banco y Cuentas 
-# Crea una clase Cuenta con titular y saldo. Crea una clase Banco con lista de cuentas. Agrega 
-# métodos para abrir cuenta, buscar cuenta por titular, transferir dinero entre cuentas y mostrar 
-# estado de todas las cuentas. 
+    banco.transferir_dinero("Nancy Marchant", "Ruth Diaz", 500)
+    print("Estado de las cuentas después de la segunda transferencia:")
+    banco.mostrar_estado_cuentas()
+    print()
 # Ejercicio 13 — Veterinaria y Mascotas 
 # Crea una clase Mascota con nombre, especie y edad. Crea una clase Veterinaria que permita 
 # registrar mascotas, buscar por nombre, listar todas y calcular la edad promedio de las mascotas. 
