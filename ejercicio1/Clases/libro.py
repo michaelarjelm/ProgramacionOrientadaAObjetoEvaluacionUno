@@ -4,6 +4,4 @@ class Libro:
         self.autor=autor
         self.copias=copias
 
-    def libro(self):
-        return f"{self.titulo} de {self.autor} con {self.copias} copias"
-    
+   
