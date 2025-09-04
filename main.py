@@ -510,3 +510,199 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#ejercicio 11
+
+from ejercicio_11.empleado_empresa import Empleado, Empresa 
+
+def main():
+    # Crear empleados
+    empleado1 = Empleado("ruth", 3000)
+    empleado2 = Empleado("Samuel", 4000)
+    empleado3 = Empleado("Bastian", 3500)
+
+    # Crear empresa
+    empresa1 = Empresa("mi empresa")
+
+    #Contratar empleados
+    empresa1.contratar_empleado(empleado1)
+    empresa1.contratar_empleado(empleado2)
+    empresa1.contratar_empleado(empleado3)
+
+    # Listar empleados
+    print("\nListado de empleados:")
+    empresa1.listar_empleados()
+
+    #Calcular y mostrar el gasto total en sueldos
+    gasto_total = empresa1.calcular_gasto_total_sueldos()
+    print(f"\nGasto total en sueldos: {gasto_total}")
+
+if __name__ == "__main__":
+    main()
+
+#ejercicio 12
+
+# main.py
+from ejercicio_12.banco_y_cuentas import Banco 
+
+def main():
+    # Crear un banco
+    mi_banco = Banco()
+
+    # Abrir cuentas
+    mi_banco.abrir_cuenta("Juan Pérez", 1000)
+    mi_banco.abrir_cuenta("María García", 500)
+    mi_banco.abrir_cuenta("Pedro López")  #Cuenta con saldo inicial 0
+
+    #Mostrar estado inicial de las cuentas
+    print("\nEstado inicial de las cuentas:")
+    mi_banco.mostrar_estado_cuentas()
+
+    #Realizar algunas transacciones
+    mi_banco.transferir("Juan Pérez", "María García", 200)
+    mi_banco.transferir("María García", "Pedro López", 100)
+    mi_banco.transferir("Ana Sánchez", "Juan Pérez", 50)  #Intentar transferir de una cuenta que no existe
+
+    #Intentar retirar
+    cuenta_juan = mi_banco.buscar_cuenta("Juan Pérez")
+    if cuenta_juan:
+        cuenta_juan.retirar(1500)  #Intenta retirar más de lo que tiene
+
+    #Mostrar estado final de las cuentas
+    print("\nEstado final de las cuentas:")
+    mi_banco.mostrar_estado_cuentas()
+
+if __name__ == "__main__":
+    main()
+
+#ejercicio 13
+from ejercicio_13.veterinaria import Mascota, Veterinaria
+
+if __name__ == "__main__":
+    #Creamos una instancia de la veterinaria
+    mi_veterinaria = Veterinaria()
+
+    #Creamos algunas mascotas de ejemplo
+    mascota1 = Mascota("Firulais", "Perro", 5)
+    mascota2 = Mascota("Michi", "Gato", 3)
+    mascota3 = Mascota("Rocky", "Perro", 7)
+    mascota4 = Mascota("Loro", "Ave", 2)
+
+    #Registramos las mascotas en la veterinaria
+    mi_veterinaria.registrar_mascota(mascota1)
+    mi_veterinaria.registrar_mascota(mascota2)
+    mi_veterinaria.registrar_mascota(mascota3)
+    mi_veterinaria.registrar_mascota(mascota4)
+
+    #Listamos todas las mascotas registradas
+    mi_veterinaria.listar_mascotas()
+
+    #Buscamos una mascota por nombre
+    nombre_a_buscar = "Michi"
+    mi_veterinaria.buscar_mascota(nombre_a_buscar)
+
+    #Intentamos buscar una mascota que no existe
+    nombre_a_buscar_inexistente = "Wally"
+    mi_veterinaria.buscar_mascota(nombre_a_buscar_inexistente)
+
+    #Calculamos y mostramos la edad promedio de las mascotas
+    mi_veterinaria.calcular_edad_promedio()
+
+#ejercicio 14
+
+from ejercicio_14.pregunta import Pregunta, Examen  # Importa las clases desde el archivo pregunta.py
+
+def evaluar_examen(examen):
+    """
+    Evalúa las respuestas de un estudiante.
+
+    Args:
+        examen (Examen): El objeto Examen a evaluar.
+    """
+    if not examen.preguntas:
+        print("El examen está vacío. No se puede evaluar.")
+        return
+
+    puntaje_total = 0
+    for i, pregunta in enumerate(examen.preguntas):
+        respuesta_estudiante = input(f"Pregunta {i + 1}: {pregunta.enunciado}\nTu respuesta: ")
+        if respuesta_estudiante.strip().lower() == pregunta.respuesta_correcta.strip().lower():
+            print("¡Correcto!")
+            puntaje_total += 1
+        else:
+            print(f"Incorrecto. La respuesta correcta era: {pregunta.respuesta_correcta}")
+
+    print(f"\nTu puntaje total es: {puntaje_total} de {examen.contar_preguntas()}")
+
+def guardar_examen(examen, nombre_archivo="examen.txt"):
+    """
+    Guarda el examen en un archivo de texto.
+
+    Args:
+        examen (Examen): El objeto Examen a guardar.
+        nombre_archivo (str): El nombre del archivo donde guardar el examen.
+    """
+    try:
+        with open(nombre_archivo, "w") as archivo:
+            for pregunta in examen.preguntas:
+                archivo.write(f"{pregunta.enunciado}|{pregunta.respuesta_correcta}\n")
+        print(f"Examen guardado en '{nombre_archivo}'")
+    except Exception as e:
+        print(f"Error al guardar el examen: {e}")
+
+def cargar_examen(nombre_archivo="examen.txt"):
+    """
+    Carga un examen desde un archivo de texto.
+
+    Args:
+        nombre_archivo (str): El nombre del archivo del que cargar el examen.
+
+    Returns:
+        Examen: El objeto Examen cargado, o None si hubo un error.
+    """
+    examen = Examen()
+    try:
+        with open(nombre_archivo, "r") as archivo:
+            for linea in archivo:
+                enunciado, respuesta_correcta = linea.strip().split("|")
+                pregunta = Pregunta(enunciado, respuesta_correcta)
+                examen.agregar_pregunta(pregunta)
+        print(f"Examen cargado desde '{nombre_archivo}'")
+        return examen
+    except FileNotFoundError:
+        print(f"El archivo '{nombre_archivo}' no fue encontrado.")
+        return None
+    except Exception as e:
+        print(f"Error al cargar el examen: {e}")
+        return None
+
+
+if __name__ == "__main__":
+    #Crear un examen
+    mi_examen = Examen()
+
+    #Crear preguntas (puedes mover esto a una función para organizar mejor)
+    pregunta1 = Pregunta("¿Cuál es la capital de Francia?", "París")
+    pregunta2 = Pregunta("¿Cuál es el resultado de 2 + 2?", "4")
+    pregunta3 = Pregunta("¿En qué año se descubrió América?", "1492")
+
+    #Agregar preguntas al examen
+    mi_examen.agregar_pregunta(pregunta1)
+    mi_examen.agregar_pregunta(pregunta2)
+    mi_examen.agregar_pregunta(pregunta3)
+
+    #Listar las preguntas
+    mi_examen.listar_preguntas()
+
+    #Evaluar el examen
+    evaluar_examen(mi_examen)
+
+    #Guardar el examen
+    guardar_examen(mi_examen, "mi_examen.txt")
+
+    #Cargar un examen (prueba)
+    examen_cargado = cargar_examen("mi_examen.txt")
+    if examen_cargado:
+        print("\nExamen cargado:")
+        examen_cargado.listar_preguntas()
+        evaluar_examen(examen_cargado)  #Evaluar el examen cargado
